@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,302 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* reset */
+html, body, h1, h2, h3, h4, h5, p {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size: 100%;
+    font-stretch: inherit;
+    vertical-align: baseline;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(206, 94%, 87%);
+    /* to place everything in the center of body */
+    display: grid;
+    place-items: center;
+    height: 100vh; 
+    max-width: 100%;
+    overflow: hidden;
+    /* end of centerilizig */
+}
+#container {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    height: 75% ; 
+    width: 75%;
+    padding: 1.87rem;
+    border-radius: .8rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+}
+.nav-header{
+    width: 30vw;
+}
+.side-nav {
+    padding-top: 3.5rem;
+    background-color: rgb(255, 255, 255);
+    height:100%; 
+    border-radius: .8rem;
+    background-image: url("assets/images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.main-section{
+    background-color: rgb(255, 255, 255);
+    width:70vw;
+    display: flex;
+    flex-direction: column;
+    padding:10rem;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    
+}
+.form-hgroup{
+    padding-bottom: 2rem;
+}
+.form-input {
+    border-radius: .3rem;
+    height: 2.5rem;
+    padding: .5rem;
+    border-color: hsl(229, 24%, 87%);
+}
+.form-input:hover {
+    color:hsl(213, 96%, 18%);
+    cursor: pointer;
+}
+.form-label{
+    color: hsl(213, 96%, 18%);
+    padding-bottom: .2rem;
+}
+.field-group{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.8rem;
+}
+.hgroup-p{
+    color:hsl(231, 11%, 63%);
+    font-size:25px;
+}
+.hgroup-heading{
+    color: hsl(213, 96%, 18%);
+    font-size: 35px;
+}
+.btn {
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    border-color: hsl(213, 96%, 18%);
+    align-self: flex-end ;
+    border-radius: .3rem;
+    padding: 10px;
+    margin-top: 5rem;
+    width:8rem;
+    height: 3rem;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color:hsl(206, 82%, 68%);
+    border-color:hsl(206, 82%, 68%) ;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+.circle-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font: 15px Arial, sans-serif;
+}
+.list-items {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+}
+.list-item-info{
+    padding-left: 20px;
+}
+.nav-heading{
+    color:hsl(231, 11%, 63%)
+}
+.nav-p {
+    color:white;
+}
+.active{
+    background-color: hsl(206, 94%, 87%);
+    color: hsl(213, 96%, 18%);
+    font-weight: bold;
+}
+.error-text-name, .error-text-email, .error-text-phone {
+  color: hsl(354, 84%, 57%);
+  padding-bottom: .2rem;
+  display: none;
+
+}
+.labels-container{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.error-border{
+    border: 2px solid hsl(354, 84%, 57%);
+}
+
+/* media queries */
+/* Tablet view */
+@media screen and (min-width:579px) and (max-width: 1180px) {
+    body{
+        display: flex;
+        justify-content: center;
+        place-items:unset;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 0;
+    }
+    #container {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+        align-items: center;
+        position: relative;
+        background-color: hsl(206, 94%, 87%);
+        box-shadow: none;
+    }
+    .nav-header{
+        width: 100%;
+        height: 25vh;
+        border-radius: 0;
+    }
+    .side-nav{
+        background-image: url("assets/images/bg-sidebar-mobile.svg");
+        border-radius: 0;
+    }
+    .list-item-info{
+        display: none;
+    }
+    ul {
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+    }
+    .main-section {
+        background-color: rgb(255, 255, 255);
+        width: 85%;
+        height: 65%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        position: absolute;
+        top: 10.625rem;
+        border-radius: 1.2rem;
+    }
+    .form-hgroup{
+        padding-bottom: 3rem;
+        padding-top: 2rem;
+    }
+    .hgroup-heading {
+        padding-bottom: 2rem;
+    }
+    .labels-container{
+       font-size: 20px;
+    }
+}
+
+/* Mobile view */
+@media screen and (max-width:578px) {
+    body{
+        display: flex;
+        justify-content: center;
+        place-items:unset;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 0;
+    }
+    #container {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+        align-items: center;
+        position: relative;
+        background-color: hsl(206, 94%, 87%);
+        box-shadow: none;
+    }
+
+    .nav-header{
+        width: 100%;
+        height: 25vh;
+        border-radius: 0;
+    }
+    .side-nav{
+        background-image: url("assets/images/bg-sidebar-mobile.svg");
+        border-radius: 0;
+    }
+    .list-items {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+    }
+    .list-item-info{
+        display: none;
+    }
+    .circle-icon{
+        height: 40px;
+        width: 40px;
+    }
+    ul {
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       padding: 0;
+    }
+    .main-section {
+        background-color: rgb(255, 255, 255);
+        width: 90%;
+        height: 65%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        position: absolute;
+        top: 7.625rem;
+        border-radius: 1.2rem;
+    }
+    .form-hgroup{
+        padding-bottom: 3rem;
+        padding-top: 2rem;
+    }
+    .hgroup-heading {
+        padding-bottom: 2rem;
+        color: hsl(213, 96%, 18%);
+        font-size: 25px;
+    }
+    .hgroup-p {
+        color: hsl(231, 11%, 63%);
+        font-size: 18px;
+    }
+    btn {
+        margin-top: 6rem;
+    }
 }
