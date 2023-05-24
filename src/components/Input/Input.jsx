@@ -1,12 +1,12 @@
-const Input = (props) => {
-    console.log(props)
+const Input = ({id, labelName, type, placeholder}) => {
+    // const {name, labelName, type, placeholder} = props;
     return(
         <div className="field-group">
             <div className="labels-container">
-                <label className="form-label">{props.labelName}</label>
-                <label className="error-text-name">This field is required</label> 
+                <label className="form-label" for={id}>{labelName}</label>
+                <label className="error-text-name" for={id}>This field is required</label> 
             </div>
-            <input type={props.type} id="name" className="form-input" placeholder={props.placeholder} />
+            <input type={type} id={id} className="form-input" placeholder={placeholder} />
         </div>
     );
 }
