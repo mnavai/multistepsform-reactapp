@@ -1,31 +1,13 @@
-const Card = () => {
+const Card = ({src, altText, label, price}) => {
     return(
         <div class="card-group">
-            <div class="card">
-                <div class="icon">
-                    <img src="assets/images/icon-arcade.svg" alt="arcade icon"/>
+            <div className="card">
+                <div className="icon">
+                    <img src={src} alt={altText}/>
                 </div>
-                <div class="text-group">
-                    <h5 class="card-label-text">Arcade</h5>
-                    <p class="card-text">$9/mon</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <img src="assets/images/icon-advanced.svg" alt="advanced icon"/>
-                </div>
-                <div class="text-group">
-                    <h5 class="card-label-text">Advanced</h5>
-                    <p class="card-text">$12/mon</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <img src="assets/images/icon-pro.svg" alt="pro icon"/>
-                </div>
-                <div class="text-group">
-                    <h5 class="card-label-text">Pro</h5>
-                    <p class="card-text">$15/mon</p>
+                <div className="text-group">
+                    <h5 className="card-label-text">{label}</h5>
+                    <p className="card-text">{price}</p>
                 </div>
             </div>
          </div>

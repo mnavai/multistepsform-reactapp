@@ -10,9 +10,19 @@ const SecondPage = () => {
             <main class="main-section">
                 <HeadingGroup />
                 <form id="form" class="form-group">
-                    <Card />
-                    <Card />
-                    <Card />
+                    <Card src="assets/images/icon-arcade.svg"
+                          altText="arcade icon"
+                          label="Arcade"
+                          price="$9/mon"/>
+                    <Card src="assets/images/icon-advanced.svg" 
+                          altText="advanced icon"
+                          label="Advanced"
+                          price="$12/mon"/>
+                    <Card
+                          src="assets/images/icon-pro.svg"
+                          altText="pro icon"
+                          label="Pro"
+                          price="$15/mon"/>
                     <div class="grey-bar">
                         <h5 class="grey-bar-month">Monthly</h5>
                         <label class="switch">
