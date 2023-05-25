@@ -1,5 +1,7 @@
 import Button from "../../components/Button/Button";
 import HeadingGroup from "../../components/HeadingGroup/HeadingGroup";
+import Slidebar from "../../components/Sidebar/Sidebar";
+import Card from "../../components/Card/Card";
 
 const SecondPage = () => {
     return(
