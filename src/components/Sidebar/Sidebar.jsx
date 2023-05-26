@@ -1,52 +1,13 @@
+import SidebarLink from "./Component/SidebarLink/SidebarLink";
 const Sidebar = () => {
     return(
         <header className="nav-header">
             <nav className="side-nav">
                 <ul>
-                    <li className="list-items">
-                        <div className="circle-icon active">
-                            <span>
-                                1
-                            </span>   
-                        </div>
-                        <div class="list-item-info">
-                            <h5 className="nav-heading">STEP 1</h5>
-                            <p className="nav-p">YOUR INFO</p>
-                        </div>
-                    </li>
-                    <li class="list-items">
-                        <div className="circle-icon">
-                            <span>
-                                2
-                            </span>  
-                        </div>
-                        <div className="list-item-info">
-                            <h5 className="nav-heading">STEP 2</h5>
-                            <p className="nav-p">SELECT PLAN</p>
-                        </div>
-                    </li>
-                    <li className="list-items">
-                        <div className="circle-icon">
-                            <span>
-                                3
-                            </span>  
-                        </div>
-                        <div className="list-item-info">
-                            <h5 className="nav-heading">STEP 3</h5>
-                            <p className="nav-p">ADD-ONS</p>
-                        </div>
-                    </li>
-                    <li className="list-items">
-                        <div className="circle-icon">
-                            <span>
-                                4
-                            </span>  
-                        </div>
-                        <div className="list-item-info">
-                            <h5 className="nav-heading">STEP 4</h5>
-                            <p className="nav-p">SUMMARY</p>
-                        </div>
-                    </li>
+                    <SidebarLink  step="STEP 1" text="YOUR INFO" />
+                    <SidebarLink  step="STEP 2" text="SELECT PLAN" />
+                    <SidebarLink  step="STEP 3" text="ADD-ONS" />
+                    <SidebarLink  step="STEP 4" text="SUMMARY" />
                 </ul>
             </nav>
         </header>
