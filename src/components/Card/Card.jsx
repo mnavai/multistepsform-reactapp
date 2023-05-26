@@ -1,6 +1,5 @@
 const Card = ({src, altText, label, price}) => {
     return(
-        <div class="card-group">
             <div className="card">
                 <div className="icon">
                     <img src={src} alt={altText}/>
@@ -10,7 +9,6 @@ const Card = ({src, altText, label, price}) => {
                     <p className="card-text">{price}</p>
                 </div>
             </div>
-         </div>
     );
 }
 export default Card;
