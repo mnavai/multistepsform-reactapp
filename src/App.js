@@ -1,6 +1,7 @@
 import HeadingGroup from "./components/HeadingGroup/HeadingGroup";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Form from "./components/Form/Form";
+import './index.css';
 
 const App = () => {
   return (
