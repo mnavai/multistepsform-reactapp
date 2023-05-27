@@ -1,4 +1,5 @@
-import SidebarLink from "./Component/SidebarLink/SidebarLink";
+
+import SidebarLink from "../SidebarLink/SidebarLink"
 const Sidebar = () => {
     return(
         <header className="nav-header">

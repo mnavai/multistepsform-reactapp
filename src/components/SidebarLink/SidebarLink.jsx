@@ -11,6 +11,6 @@ const SidebarLink = ({step, text}) => {
                     <p className="nav-p">{text}</p>
                 </div>
             </li>
-          );
+    );
 }
 export default SidebarLink;
