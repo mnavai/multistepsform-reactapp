@@ -15,12 +15,10 @@ body {
     overflow: hidden;
     /* end of centerilizig */
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 /* reset */
 html, body, h1, h2, h3, h4, h5, p {
     margin:0;
@@ -38,6 +36,9 @@ html, body, h1, h2, h3, h4, h5, p {
     justify-content: center;
     background-color: azure;
     padding: 2rem;
+}
+.your-info{
+  display: flex;
 }
 .main-section{
     background-color: aquamarine;

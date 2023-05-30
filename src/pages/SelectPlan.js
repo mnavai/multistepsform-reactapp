@@ -1,11 +1,12 @@
-import Button from "../../components/Button/Button";
-import HeadingGroup from "../../components/HeadingGroup/HeadingGroup";
-import Slidebar from "../../components/Sidebar/Sidebar";
-import Card from "../../components/Card/Card";
+import Button from "../components/Button/Button";
+import HeadingGroup from "../components/HeadingGroup/HeadingGroup";
+import Slidebar from "../components/Sidebar/Sidebar";
+import Card from "../components/Card/Card";
+import { Link } from "react-router-dom";
 
-const SecondPage = () => {
+const SelectPlan = () => {
     return(
-        <div className="SecondPage">
+        <div className="select-plan">
             <Slidebar />
             <main class="main-section">
                 <HeadingGroup />
@@ -34,12 +35,12 @@ const SecondPage = () => {
                         <p className="grey-bar-year">Yearly</p>
                     </div>
                     <div className="buttons">
-                        <Button type="submit" className="btn-goback">Go Back</Button>
-                        <Button type="submit" className="btn">Next Step</Button>
+                        <Link to="/"><Button type="submit" className="btn-goback">Go Back</Button></Link>
+                        <Link to="/add-ons"><Button type="submit" className="btn">Next Step</Button></Link>
                     </div>
                 </div>
             </main>        
         </div>
     );
 }
-export default SecondPage;
+export default SelectPlan;
