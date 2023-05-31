@@ -5,10 +5,10 @@ const Sidebar = () => {
         <header className="nav-header">
             <nav className="side-nav">
                 <ul>
-                    <SidebarLink  step="STEP 1" text="YOUR INFO" />
-                    <SidebarLink  step="STEP 2" text="SELECT PLAN" />
-                    <SidebarLink  step="STEP 3" text="ADD-ONS" />
-                    <SidebarLink  step="STEP 4" text="SUMMARY" />
+                    <SidebarLink  step="1" text="YOUR INFO" />
+                    <SidebarLink  step="2" text="SELECT PLAN" />
+                    <SidebarLink  step="3" text="ADD-ONS" />
+                    <SidebarLink  step="4" text="SUMMARY" />
                 </ul>
             </nav>
         </header>

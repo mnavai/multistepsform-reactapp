@@ -1,3 +1,4 @@
+import './SidebarLink.css';
 const SidebarLink = ({step, text}) => {
     return(
             <li className="list-items">
@@ -7,7 +8,7 @@ const SidebarLink = ({step, text}) => {
                     </span>   
                 </div>
                 <div class="list-item-info">
-                    <h5 className="nav-heading">STEP{step}</h5>
+                    <h5 className="nav-heading">STEP {step}</h5>
                     <p className="nav-p">{text}</p>
                 </div>
             </li>

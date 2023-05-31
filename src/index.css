@@ -52,6 +52,7 @@ html, body, h1, h2, h3, h4, h5, p {
 .main-section{
     background-color: aquamarine;
     padding: 2rem;
+    width:50vw;
 }
 .nav-header{
     background-color: blanchedalmond;
