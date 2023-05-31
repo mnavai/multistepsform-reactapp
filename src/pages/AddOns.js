@@ -12,9 +12,18 @@ const AddOns = () => {
             <HeadingGroup heading="Pick add-ons" ptag="Add-ons help enhance your gaming experience." />
             <div id="form" className="form-group">
                 <div className="checkbox-group">
-                    <Checkbox label="Online Service" text="Access to multiplayer games" price="+$1/mon" />
-                    <Checkbox label="Larger Storage" text="Extra 1TB of cloud save" price="+$2/mon" />
-                    <Checkbox label="Customizable Profile" text="Custom theme on your profile" price="+$2/mon" />
+                    <Checkbox 
+                        label="Online Service" 
+                        text="Access to multiplayer games" 
+                        price="+$1/mon" />
+                    <Checkbox 
+                        label="Larger Storage" 
+                        text="Extra 1TB of cloud save" 
+                        price="+$2/mon" />
+                    <Checkbox 
+                        label="Customizable Profile" 
+                        text="Custom theme on your profile" 
+                        price="+$2/mon" />
                 </div>
                 <div className="buttons">
                     <Link to="/select-plan"><Button type="submit" className="btn-goback">Go Back</Button></Link>

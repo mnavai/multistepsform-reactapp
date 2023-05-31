@@ -2,7 +2,7 @@ const Checkbox = ({label,text,price}) => {
     return(
         <div className="checkbox-container">
             <div className="checkbox">
-                <input type="checkbox" id="myCheckbox"></input>
+                <input type="checkbox" id="checkbox" className="checkbox-class" />
             </div>
             <div className="label-text">
                 <h5 className="checkbox-label">{label}</h5>

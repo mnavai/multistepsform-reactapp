@@ -5,7 +5,7 @@ const YourInfo = () => {
     return(
         <div className="your-info">
             <Sidebar />
-            <main class="main-section">
+            <main className="main-section">
                 <HeadingGroup heading="Personal Info" ptag="Please provide your name, email address, and phone number." />
                 <Form />
             </main>

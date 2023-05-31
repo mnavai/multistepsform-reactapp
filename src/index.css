@@ -40,6 +40,15 @@ html, body, h1, h2, h3, h4, h5, p {
 .your-info{
   display: flex;
 }
+.select-plan{
+  display: flex;
+}
+.add-ons{
+  display: flex;
+}
+.summary{
+  display: flex;
+}
 .main-section{
     background-color: aquamarine;
     padding: 2rem;
