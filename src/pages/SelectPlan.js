@@ -8,10 +8,10 @@ const SelectPlan = () => {
     return(
         <div className="select-plan">
             <Slidebar />
-            <main class="main-section">
-                <HeadingGroup />
-                <div id="form" class="form-group">
-                    <div class="card-group">
+            <main className="main-section">
+                <HeadingGroup heading="Select your plan" ptag="You have the option monthly or yearly billing." />
+                <div id="form" className="form-group">
+                    <div className="card-group">
                         <Card src="assets/images/icon-arcade.svg"
                             altText="arcade icon"
                             label="Arcade"
@@ -26,9 +26,9 @@ const SelectPlan = () => {
                             label="Pro"
                             price="$15/mon"/>
                     </div>
-                    <div class="grey-bar">
-                        <h5 class="grey-bar-month">Monthly</h5>
-                        <label class="switch">
+                    <div className="grey-bar">
+                        <h5 className="grey-bar-month">Monthly</h5>
+                        <label className="switch">
                             <input type="checkbox"/>
                             <span className="slider round"></span>
                         </label>
