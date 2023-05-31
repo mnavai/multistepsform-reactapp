@@ -11,3 +11,9 @@
 .circle-icon {
     padding-right: 1rem;
 }
+.nav-heading{
+    color: hsl(231, 11%, 63%);
+}
+.nav-p{
+    color:white;
+}

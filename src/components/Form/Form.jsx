@@ -1,6 +1,7 @@
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 import { Link } from "react-router-dom";
+import '../Button/Button.css';
 
 const Form = () => {
     return(
