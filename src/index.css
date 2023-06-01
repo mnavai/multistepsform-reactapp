@@ -108,3 +108,17 @@ html, body, h1, h2, h3, h4, h5, p {
   background-color: hsl(213, 96%, 18%);
   transition: .4s;
 }
+.button{
+  display: flex;
+  justify-content: right;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+.checkbox-group{
+  display: flex;
+  flex-direction: column;
+}

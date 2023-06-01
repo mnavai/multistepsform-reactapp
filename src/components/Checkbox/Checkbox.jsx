@@ -1,3 +1,4 @@
+import './Checkbox.css';
 const Checkbox = ({label,text,price}) => {
     return(
         <div className="checkbox-container">

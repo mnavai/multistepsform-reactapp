@@ -1,0 +1,39 @@
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    width:27rem;
+    border: 2px solid rgb(201, 210, 221); 
+    border-radius: 0.3rem;
+    padding: .7rem;
+    margin: .5rem;
+}
+.checkbox{
+    margin-right: 1rem;
+}
+.label-text{
+    
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+    color:hsl(231, 11%, 63%);
+    font-weight: bold;
+}
+
+.checkbox-label{
+    color: rgb(2, 41, 90);
+    font-weight: bold;
+    font-size: .9rem;
+}
+.checkbox-p{
+    font-size: .7rem;
+
+}
+.price-tag {
+    display: flex;
+    justify-content: right;
+    color: rgb(98, 157, 230);
+    font-size: .8rem;
+    font-weight: bold;
+    text-align: right;
+    padding-left: 2.4rem;
+}
