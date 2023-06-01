@@ -7,8 +7,10 @@
 .hgroup-heading{
     font-size: 1.5rem;
     font-weight: bold;
+    color: hsl(213, 96%, 18%);
 }
 .hgroup-p{
     font-size: 1rem;
     font-weight: normal;
+    color: hsl(231, 11%, 63%);
 }

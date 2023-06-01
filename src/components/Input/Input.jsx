@@ -1,3 +1,4 @@
+import './Input.css';
 const Input = ({id, labelName, type, placeholder}) => {
     // const {name, labelName, type, placeholder} = props;
     return(

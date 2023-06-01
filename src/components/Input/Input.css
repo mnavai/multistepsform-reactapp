@@ -1,0 +1,28 @@
+.field-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.8rem;
+}
+.labels-container{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.form-label {
+    color: rgb(2, 41, 90);
+    padding-bottom: 0.2rem;
+}
+.error-text-name,
+.error-text-email,
+.error-text-phone {
+    color: rgb(237, 53, 72);
+    padding-bottom: 0.2rem;
+    display: none;
+}
+.form-input {
+    height: 2.5rem;
+    width: 27.7rem;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    border-color: rgb(214, 217, 230);
+}
