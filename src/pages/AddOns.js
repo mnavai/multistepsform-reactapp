@@ -25,7 +25,7 @@ const AddOns = () => {
                         text="Custom theme on your profile" 
                         price="+$2/mon" />
                 </div>
-                <div className="buttons">
+                <div className="form-buttons">
                     <Link to="/select-plan"><Button type="submit" className="btn-goback">Go Back</Button></Link>
                     <Link to="/summary"><Button type="submit" className="btn">Next Step</Button></Link>
                 </div>

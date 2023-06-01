@@ -34,7 +34,7 @@ const SelectPlan = () => {
                         </label>
                         <p className="grey-bar-year">Yearly</p>
                     </div>
-                    <div className="buttons">
+                    <div className="form-buttons">
                         <Link to="/"><Button type="submit" className="btn-goback">Go Back</Button></Link>
                         <Link to="/add-ons"><Button type="submit" className="btn">Next Step</Button></Link>
                     </div>

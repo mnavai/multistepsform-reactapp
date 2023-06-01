@@ -1,8 +1,7 @@
 .form-hgroup{
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 0 2rem 7rem
 }
 .hgroup-heading{
     font-size: 1.5rem;

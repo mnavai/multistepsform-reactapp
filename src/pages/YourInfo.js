@@ -12,7 +12,7 @@ const YourInfo = () => {
                 <HeadingGroup heading="Personal Info" ptag="Please provide your name, email address, and phone number." />
                 <div id="form" className="form-group">
                     <Form />
-                    <div className="button">
+                    <div className="form-buttons">
                         <Link to="/select-plan"><Button type="submit" className="btn">Next Step</Button></Link>
                     </div>
                 </div>

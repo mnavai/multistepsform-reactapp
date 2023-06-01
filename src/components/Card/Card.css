@@ -3,6 +3,7 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: 1.5rem;
+    margin-left: auto;
 }
 .card{
     display: flex;
@@ -13,7 +14,7 @@
     border: 2px solid rgb(201, 210, 221);
     border-radius: 0.3rem;
     padding:.7rem;
-    margin:.5rem;
+    margin:.2rem;
 }
 .icon{
     display: flex;

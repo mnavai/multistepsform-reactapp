@@ -16,7 +16,7 @@ const Summary = () => {
                     <div className="selected-addons"></div>
                     <div className="total-price"></div>
                 </div>
-                <div className="buttons">
+                <div className="form-buttons">
                     <Link to="/add-ons"><Button type="submit" className="btn-goback">Go Back</Button></Link>
                     <Link to="/"><Button type="submit" className="btn">Home</Button></Link>
                 </div>
