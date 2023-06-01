@@ -1,3 +1,4 @@
+import './Card.css';
 const Card = ({src, altText, label, price}) => {
     return(
             <div className="card">

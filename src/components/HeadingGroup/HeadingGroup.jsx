@@ -1,3 +1,4 @@
+import './HeadingGroup.css';
 const HeadingGroup = ({heading,ptag}) => {
     return (
         <hgroup className="form-hgroup">
