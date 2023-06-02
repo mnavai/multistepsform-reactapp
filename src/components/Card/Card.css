@@ -1,9 +1,9 @@
 .card-group {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-bottom: 1.5rem;
-   
+    height: 16vh;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 .card{
     display: flex;
