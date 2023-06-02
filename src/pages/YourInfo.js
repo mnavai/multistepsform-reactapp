@@ -10,7 +10,7 @@ const YourInfo = () => {
             <Sidebar />
             <main className="main-section">
                 <HeadingGroup heading="Personal Info" ptag="Please provide your name, email address, and phone number." />
-                <div id="form" className="form-group">
+                <div id="form" className="form-class">
                     <Form />
                     <div className="form-buttons">
                         <Link to="/select-plan"><Button type="submit" className="btn">Next Step</Button></Link>

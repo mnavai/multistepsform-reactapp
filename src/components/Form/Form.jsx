@@ -1,5 +1,6 @@
 import Input from "../Input/Input";
 import '../Button/Button.css';
+import '../Form/Form.css';
 
 const Form = () => {
     return(

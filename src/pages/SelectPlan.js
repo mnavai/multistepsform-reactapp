@@ -10,7 +10,7 @@ const SelectPlan = () => {
             <Slidebar />
             <main className="main-section">
                 <HeadingGroup heading="Select your plan" ptag="You have the option monthly or yearly billing." />
-                <div id="form" className="form-group">
+                <div id="form" className="form-class">
                     <div className="card-group">
                         <Card src="assets/images/icon-arcade.svg"
                             altText="arcade icon"

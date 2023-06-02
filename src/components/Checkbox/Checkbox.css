@@ -5,7 +5,7 @@
     border: 2px solid rgb(201, 210, 221); 
     border-radius: 0.3rem;
     padding: .7rem;
-    margin: 0 0 0.5rem auto;
+    margin: 0 auto 0.5rem auto;
 }
 .checkbox{
     margin-right: 1rem;

@@ -1,3 +1,9 @@
 .form-group {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width:25vw;
+    height: 30vh;
+    margin: 0 3 0 3;
 }

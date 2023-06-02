@@ -10,7 +10,7 @@ const AddOns = () => {
           <Sidebar />
           <main class="main-section">
             <HeadingGroup heading="Pick add-ons" ptag="Add-ons help enhance your gaming experience." />
-            <div id="form" className="form-group">
+            <div id="form" className="form-class">
                 <div className="checkbox-group">
                     <Checkbox 
                         label="Online Service" 
