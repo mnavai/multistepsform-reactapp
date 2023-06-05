@@ -7,6 +7,14 @@
     padding: .7rem;
     margin: 0 auto 0.5rem auto;
 }
+.checkbox-container.selected{
+    border: 2px solid blue;
+    cursor: pointer;
+}
+.checkbox-container:hover{
+    border: 2px solid blue;
+    cursor: pointer;
+}
 .checkbox{
     margin-right: 1rem;
 }

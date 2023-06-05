@@ -30,3 +30,6 @@
 .btn-goback:hover {
     color: hsl(206, 82%, 68%);
 }
+.btn.single-btn{
+    justify-content: flex-end;
+}

@@ -16,6 +16,14 @@
     padding:.7rem;
     margin:.2rem;
 }
+.card.selected {
+    border: 2px solid blue;
+    cursor: pointer;
+}
+.card:hover {
+    border: 2px solid blue;
+    cursor: pointer;
+}
 .icon{
     display: flex;
     flex-direction: row;
