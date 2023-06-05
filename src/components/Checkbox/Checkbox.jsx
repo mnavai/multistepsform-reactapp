@@ -5,11 +5,11 @@ const Checkbox = ({label,text,price}) => {
             <div className="checkbox">
                 <input type="checkbox" id="checkbox" className="checkbox-class" />
             </div>
-            <div className="label-text">
+            <div className="text-wrapper">
                 <h5 className="checkbox-label">{label}</h5>
                 <p className="checkbox-p">{text}</p>
             </div>
-            <div className="price-tag">
+            <div className="price-wrapper">
                 <p className="price-tag-p">{price}</p>
             </div>
         </div>

@@ -115,6 +115,34 @@ html, body, h1, h2, h3, h4, h5, p {
   background-color: hsl(213, 96%, 18%);
   transition: .4s;
 }
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: hsl(231, 11%, 63%);
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px hsl(231, 11%, 63%);
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round:before {
+  border-radius: 50%;
+}
 .form-buttons{
     display: flex;
     justify-content: space-between;

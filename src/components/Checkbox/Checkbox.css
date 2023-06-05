@@ -18,10 +18,11 @@
 .checkbox{
     margin-right: 1rem;
 }
-.label-text{
+.text-wrapper{
     
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     padding-right: 2rem;
     color:hsl(231, 11%, 63%);
     font-weight: bold;
@@ -36,12 +37,13 @@
     font-size: .7rem;
 
 }
-.price-tag {
-    display: flex;
-    justify-content: right;
-    color: rgb(98, 157, 230);
-    font-size: .8rem;
-    font-weight: bold;
+.price-wrapper {
     text-align: right;
-    padding-left: 2.4rem;
+}
+.price-tag-p{
+    font-size: .8rem;
+    padding-left: 2rem;
+    color: rgb(98, 157, 230);
+    font-weight: bold;
+
 }
