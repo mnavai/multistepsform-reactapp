@@ -1,5 +1,6 @@
 import Input from "../Input/Input";
-import { useState, useHistory } from 'react';
+import { useState} from 'react';
+import { useNavigate } from "react-router-dom";
 import Button from '../Button/Button.jsx';
 import '../Button/Button.css';
 import '../Form/Form.css';
@@ -14,7 +15,7 @@ const Form = () => {
     const [email,setEmail] = useState('');
     const [phone,setPhone] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    // const history = useHistory();
+    const navigate = useNavigate();
 
     const handleNameChange = (e) => {
        setName(e.target.value);
@@ -31,7 +32,6 @@ const Form = () => {
         email:email,
         phone:phone
     };
-    
     const handleSubmit = (e) => {
         e.preventDefault();
         if(formData.name === ''){
@@ -46,12 +46,11 @@ const Form = () => {
             setErrorMessage('Phone is required');
             return; 
         }  
-        console.log(formData);
-        // history.push('/select-plan',{ formData: formData });
-        //clear the states (form)
+        // console.log(formData);
         setName('');
         setEmail('');
         setPhone('');
+        navigate('/select-plan');
     }
     return(
         <form id="form" class="form-group" onSubmit={handleSubmit}>
