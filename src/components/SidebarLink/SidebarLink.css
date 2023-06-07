@@ -27,6 +27,11 @@
     margin-top: auto;
     margin-bottom: auto;
 }
+.active {
+    background-color: hsl(206, 94%, 87%);
+    color: hsl(213, 96%, 18%);
+    font-weight: bold;
+}
 .nav-heading{
     color: hsl(231, 11%, 63%);
 }

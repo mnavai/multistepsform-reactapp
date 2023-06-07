@@ -12,9 +12,6 @@ const YourInfo = () => {
                 <HeadingGroup heading="Personal Info" ptag="Please provide your name, email address, and phone number." />
                 <div id="form" className="form-class">
                     <Form />
-                    <div className="form-buttons single-btn">
-                        <Link to="/select-plan"><Button type="submit" className="btn">Next Step</Button></Link>
-                    </div>
                 </div>
             </main>
         </div>

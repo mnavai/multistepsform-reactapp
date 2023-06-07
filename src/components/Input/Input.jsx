@@ -1,5 +1,5 @@
 import './Input.css';
-const Input = ({id, labelName, type, placeholder}) => {
+const Input = ({id, labelName, type, placeholder, onChange,value}) => {
     // const {name, labelName, type, placeholder} = props;
     return(
         <div className="field-group">
@@ -7,7 +7,7 @@ const Input = ({id, labelName, type, placeholder}) => {
                 <label className="form-label" for={id}>{labelName}</label>
                 <label className="error-text-name" for={id}>This field is required</label> 
             </div>
-            <input type={type} id={id} className="form-input" placeholder={placeholder} />
+            <input type={type} id={id} className="form-input" placeholder={placeholder} onChange={onChange} value={value} required />
         </div>
     );
 }
