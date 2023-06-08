@@ -6,21 +6,24 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const SelectPlan = () => {
-    // const [card, setCard] = useState({});
+    //const [card, setCard] = useState({});
     const [arcadeCardSelected, setArcadeCardSelected] = useState(false);
     const [advancedCardSelected, setAdvancedCardSelected] = useState(false);
     const [proCardSelected, setProCardSelected] = useState(false);
     const handleClickArcade = (e) => { 
         setArcadeCardSelected(!arcadeCardSelected);
-        console.log('clicked',arcadeCardSelected);    
+        setAdvancedCardSelected(false);
+        setProCardSelected(false)  
     }
     const handleClickAdvanced = (e) => { 
         setAdvancedCardSelected(!advancedCardSelected);
-        console.log('clicked',advancedCardSelected);    
+        setArcadeCardSelected(false);
+        setProCardSelected(false);  
     }
     const handleClickPro = (e) => { 
         setProCardSelected(!proCardSelected);
-        console.log('clicked',proCardSelected);    
+        setAdvancedCardSelected(false);
+        setArcadeCardSelected(false);   
     }
     return(
         <div className="select-plan">
