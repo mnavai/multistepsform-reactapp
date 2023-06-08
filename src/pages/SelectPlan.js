@@ -7,18 +7,20 @@ import { useState } from "react";
 
 const SelectPlan = () => {
     // const [card, setCard] = useState({});
-    const [cardSelected, setCardSelected] = useState(false);
+    const [arcadeCardSelected, setArcadeCardSelected] = useState(false);
+    const [advancedCardSelected, setAdvancedCardSelected] = useState(false);
+    const [proCardSelected, setProCardSelected] = useState(false);
     const handleClickArcade = (e) => { 
-        setCardSelected(!cardSelected);
-        console.log('clicked',cardSelected);    
+        setArcadeCardSelected(!arcadeCardSelected);
+        console.log('clicked',arcadeCardSelected);    
     }
     const handleClickAdvanced = (e) => { 
-        setCardSelected(!cardSelected);
-        console.log('clicked',cardSelected);    
+        setAdvancedCardSelected(!advancedCardSelected);
+        console.log('clicked',advancedCardSelected);    
     }
     const handleClickPro = (e) => { 
-        setCardSelected(!cardSelected);
-        console.log('clicked',cardSelected);    
+        setProCardSelected(!proCardSelected);
+        console.log('clicked',proCardSelected);    
     }
     return(
         <div className="select-plan">
@@ -32,14 +34,14 @@ const SelectPlan = () => {
                             label="Arcade"
                             price="$9/mon"
                             onClick={handleClickArcade}
-                            cardSelected={cardSelected}
+                            cardSelected={arcadeCardSelected}
                             />
                         <Card src="assets/images/icon-advanced.svg" 
                             altText="advanced icon"
                             label="Advanced"
                             price="$12/mon"
                             onClick={handleClickAdvanced}
-                            cardSelected={cardSelected}
+                            cardSelected={advancedCardSelected}
                             />
                         <Card
                             src="assets/images/icon-pro.svg"
@@ -47,7 +49,7 @@ const SelectPlan = () => {
                             label="Pro"
                             price="$15/mon"
                             onClick={handleClickPro}
-                            cardSelected={cardSelected}    
+                            cardSelected={proCardSelected}    
                             />
                     </div>
                     <div className="grey-bar">
