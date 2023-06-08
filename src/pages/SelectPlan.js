@@ -3,8 +3,15 @@ import HeadingGroup from "../components/HeadingGroup/HeadingGroup";
 import Slidebar from "../components/Sidebar/Sidebar";
 import Card from "../components/Card/Card";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const SelectPlan = () => {
+    // const [card, setCard] = useState({});
+    const [cardSelected, setCardSelected] = useState(false);
+    const handleClick = (e) => { 
+        setCardSelected(!cardSelected);
+        console.log('clicked',cardSelected);    
+    }
     return(
         <div className="select-plan">
             <Slidebar />
@@ -15,16 +22,25 @@ const SelectPlan = () => {
                         <Card src="assets/images/icon-arcade.svg"
                             altText="arcade icon"
                             label="Arcade"
-                            price="$9/mon"/>
+                            price="$9/mon"
+                            onClick={handleClick}
+                            cardSelected={cardSelected}
+                            />
                         <Card src="assets/images/icon-advanced.svg" 
                             altText="advanced icon"
                             label="Advanced"
-                            price="$12/mon"/>
+                            price="$12/mon"
+                            onClick={handleClick}
+                            cardSelected={cardSelected}
+                            />
                         <Card
                             src="assets/images/icon-pro.svg"
                             altText="pro icon"
                             label="Pro"
-                            price="$15/mon"/>
+                            price="$15/mon"
+                            onClick={handleClick}
+                            cardSelected={cardSelected}    
+                            />
                     </div>
                     <div className="grey-bar">
                         <h5 className="grey-bar-month">Monthly</h5>
