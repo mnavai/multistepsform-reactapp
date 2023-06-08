@@ -8,7 +8,15 @@ import { useState } from "react";
 const SelectPlan = () => {
     // const [card, setCard] = useState({});
     const [cardSelected, setCardSelected] = useState(false);
-    const handleClick = (e) => { 
+    const handleClickArcade = (e) => { 
+        setCardSelected(!cardSelected);
+        console.log('clicked',cardSelected);    
+    }
+    const handleClickAdvanced = (e) => { 
+        setCardSelected(!cardSelected);
+        console.log('clicked',cardSelected);    
+    }
+    const handleClickPro = (e) => { 
         setCardSelected(!cardSelected);
         console.log('clicked',cardSelected);    
     }
@@ -23,14 +31,14 @@ const SelectPlan = () => {
                             altText="arcade icon"
                             label="Arcade"
                             price="$9/mon"
-                            onClick={handleClick}
+                            onClick={handleClickArcade}
                             cardSelected={cardSelected}
                             />
                         <Card src="assets/images/icon-advanced.svg" 
                             altText="advanced icon"
                             label="Advanced"
                             price="$12/mon"
-                            onClick={handleClick}
+                            onClick={handleClickAdvanced}
                             cardSelected={cardSelected}
                             />
                         <Card
@@ -38,7 +46,7 @@ const SelectPlan = () => {
                             altText="pro icon"
                             label="Pro"
                             price="$15/mon"
-                            onClick={handleClick}
+                            onClick={handleClickPro}
                             cardSelected={cardSelected}    
                             />
                     </div>
