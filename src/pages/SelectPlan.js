@@ -6,12 +6,14 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import AppLayout from "../components/AppLayout/AppLayout";
 import MainWrapper from "../components/MainWrapper/MainWrapper";
+import Toggle from "../components/Toggle/Toggle";
 
 const SelectPlan = () => {
     //const [card, setCard] = useState({});
     const [arcadeCardSelected, setArcadeCardSelected] = useState(false);
     const [advancedCardSelected, setAdvancedCardSelected] = useState(false);
     const [proCardSelected, setProCardSelected] = useState(false);
+
     const handleClickArcade = (e) => { 
         setArcadeCardSelected(!arcadeCardSelected);
         setAdvancedCardSelected(false);
@@ -57,14 +59,7 @@ const SelectPlan = () => {
                             cardSelected={proCardSelected}    
                             />
                     </div>
-                    <div className="grey-bar">
-                        <h5 className="grey-bar-month">Monthly</h5>
-                        <label className="switch">
-                            <input type="checkbox"/>
-                            <span className="slider round"></span>
-                        </label>
-                        <p className="grey-bar-year">Yearly</p>
-                    </div>
+                    <Toggle monthly="Monthly" yearly="Yearly" />
                     <div className="form-buttons">
                         <Link to="/"><Button type="submit" className="btn-goback">Go Back</Button></Link>
                         <Link to="/add-ons"><Button type="submit" className="btn">Next Step</Button></Link>
