@@ -1,3 +1,7 @@
 .app-layout {
     display: flex;
 }
+.nav-header {
+    background-color: rgb(142, 196, 235);
+    padding: 2rem;
+}

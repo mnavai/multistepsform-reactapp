@@ -1,4 +1,3 @@
-// import './index.css';
 import { Routes, Route } from 'react-router-dom';
 import YourInfo from './pages/YourInfo';
 import SelectPlan from './pages/SelectPlan';

@@ -2,7 +2,7 @@ import "./AppLayout.css"
 
 const AppLayout = ({children}) => {
     return(
-        <div className="app-layput">
+        <div className="app-layout">
             {children}
         </div>
     );
