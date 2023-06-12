@@ -4,6 +4,8 @@ import Slidebar from "../components/Sidebar/Sidebar";
 import Card from "../components/Card/Card";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import AppLayout from "../components/AppLayout/AppLayout";
+import MainWrapper from "../components/MainWrapper/MainWrapper";
 
 const SelectPlan = () => {
     //const [card, setCard] = useState({});
@@ -26,9 +28,9 @@ const SelectPlan = () => {
         setArcadeCardSelected(false);   
     }
     return(
-        <div className="select-plan">
+        <AppLayout>
             <Slidebar />
-            <main className="main-section">
+            <MainWrapper>
                 <HeadingGroup heading="Select your plan" ptag="You have the option monthly or yearly billing." />
                 <div id="form" className="form-class">
                     <div className="card-group">
@@ -68,8 +70,8 @@ const SelectPlan = () => {
                         <Link to="/add-ons"><Button type="submit" className="btn">Next Step</Button></Link>
                     </div>
                 </div>
-            </main>        
-        </div>
+            </MainWrapper>       
+        </AppLayout>
     );
 }
 export default SelectPlan;

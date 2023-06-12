@@ -1,20 +1,20 @@
 import Sidebar from "../components/Sidebar/Sidebar";
 import HeadingGroup  from "../components/HeadingGroup/HeadingGroup";
 import Form from "../components/Form/Form";
-import { Link } from "react-router-dom";
-import Button from '../components/Button/Button.jsx';
+import AppLayout from "../components/AppLayout/AppLayout";
+import MainWrapper from "../components/MainWrapper/MainWrapper";
 
 const YourInfo = () => {
     return(
-        <div className="your-info">
+        <AppLayout>
             <Sidebar />
-            <main className="main-section">
+            <MainWrapper>
                 <HeadingGroup heading="Personal Info" ptag="Please provide your name, email address, and phone number." />
                 <div id="form" className="form-class">
                     <Form />
                 </div>
-            </main>
-        </div>
+            </MainWrapper>
+        </AppLayout>    
     );
 }
 export default YourInfo;

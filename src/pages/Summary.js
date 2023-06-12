@@ -2,12 +2,14 @@ import { Link } from "react-router-dom";
 import Button from "../components/Button/Button";
 import Sidebar from "../components/Sidebar/Sidebar";
 import HeadingGroup from "../components/HeadingGroup/HeadingGroup";
+import AppLayout from "../components/AppLayout/AppLayout";
+import MainWrapper from "../components/MainWrapper/MainWrapper";
 
 const Summary = () => {
     return (
-        <div className="summary">
+        <AppLayout>
             <Sidebar />
-            <main className="main-section">
+            <MainWrapper>
                 <HeadingGroup 
                         heading="Finishing up" 
                         ptag="Double-check everything looks ok before confirming." />
@@ -22,8 +24,8 @@ const Summary = () => {
                         <Link to="/"><Button type="submit" className="btn">Home</Button></Link>
                     </div>
                 </div>
-            </main>
-        </div>
+            </MainWrapper>
+        </AppLayout>
     );
 }
 export default Summary;

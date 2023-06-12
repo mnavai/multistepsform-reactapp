@@ -40,27 +40,8 @@ html, body, h1, h2, h3, h4, h5, p {
     height: 70vh;
     padding: 2rem 0 2rem 2rem;
 }
-.your-info{
-  display: flex;
-}
-.select-plan{
-  display: flex;
- 
-}
-.add-ons{
-  display: flex;
-}
-.summary{
-  display: flex;
-}
-.main-section{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    margin: 2rem 0 2rem 2.7rem;
-    width:46.vw;
-    height: auto;
-}
+
+
 .nav-header{
     background-color: blanchedalmond;
     padding: 2rem;

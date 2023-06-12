@@ -3,12 +3,14 @@ import Button from "../components/Button/Button";
 import Sidebar from "../components/Sidebar/Sidebar";
 import HeadingGroup from "../components/HeadingGroup/HeadingGroup";
 import Checkbox from "../components/Checkbox/Checkbox";
+import AppLayout from "../components/AppLayout/AppLayout";
+import MainWrapper from "../components/MainWrapper/MainWrapper";
 
 const AddOns = () => {
     return (
-        <div className="add-ons">
+        <AppLayout>
           <Sidebar />
-          <main class="main-section">
+          <MainWrapper>
             <HeadingGroup heading="Pick add-ons" ptag="Add-ons help enhance your gaming experience." />
             <div id="form" className="form-class">
                 <div className="checkbox-group">
@@ -30,8 +32,8 @@ const AddOns = () => {
                     <Link to="/summary"><Button type="submit" className="btn">Next Step</Button></Link>
                 </div>
             </div>
-          </main>
-        </div>
+          </MainWrapper>
+        </AppLayout>
     );
 }
 export default AddOns;

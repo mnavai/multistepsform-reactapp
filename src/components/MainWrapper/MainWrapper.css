@@ -1,0 +1,8 @@
+.main-section {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    margin: 2rem 0 2rem 2.7rem;
+    width: 46.vw;
+    height: auto;
+}

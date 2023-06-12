@@ -1,8 +1,9 @@
+import AppLayout from "../components/AppLayout/AppLayout";
 const NotFound = () => {
     return (
-        <div className="not-found">
+        <AppLayout>
             <h1>Not Found</h1>
-        </div>
+        </AppLayout>
     );
 }
 export default NotFound;
