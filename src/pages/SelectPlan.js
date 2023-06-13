@@ -17,7 +17,7 @@ const SelectPlan = () => {
     const handleClickArcade = (e) => { 
         setArcadeCardSelected(!arcadeCardSelected);
         setAdvancedCardSelected(false);
-        setProCardSelected(false)  
+        setProCardSelected(false);
     }
     const handleClickAdvanced = (e) => { 
         setAdvancedCardSelected(!advancedCardSelected);
