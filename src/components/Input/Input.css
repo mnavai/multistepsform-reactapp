@@ -15,7 +15,8 @@
 }
 .error-text-name,
 .error-text-email,
-.error-text-phone {
+.error-text-phone
+.error-text {
     color: rgb(237, 53, 72);
     padding-bottom: 0.2rem;
     display: none;

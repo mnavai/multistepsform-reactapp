@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
-    margin: 2rem 0 2rem 2.7rem;
+    margin: 2rem 0 2rem 3.2rem;
     width: 46.vw;
     height: auto;
 }
@@ -14,9 +14,6 @@
     width: 40vw;
     height: 45vh;
 }
-
-
-
 .form-buttons {
     display: flex;
     justify-content: space-between;
@@ -25,20 +22,17 @@
     margin-left: auto;
     margin-right: auto;
 }
-
 .card-group {
     height: 35vh;
     width: 22vw;
     margin: 0 auto 0 8rem;
 }
-
 .bill-container {
     height: 35vh;
     width: 23vw;
     background-color: rgb(201, 199, 199);
     margin: 1rem auto 0 8rem;
 }
-
 .checkbox-group {
     height: 35vh;
     width: 22vw;

@@ -1,67 +1,93 @@
 import Input from "../Input/Input";
-import { useState} from 'react';
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from '../Button/Button.jsx';
-import '../Button/Button.css';
-import '../Form/Form.css';
+import Button from "../Button/Button.jsx";
+import "../Button/Button.css";
+import "../Form/Form.css";
 
 const Form = () => {
-    // const [formData, setFormData] = useState({name:'',email:'',phone:''});
-    // const handleForm = (e) => {
-    //     setFormData({...formData,[e.target.id]:e.target.value});
-    //     console.log()
-    // }
-    const [name,setName] = useState('');
-    const [email,setEmail] = useState('');
-    const [phone,setPhone] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
-    const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [errors, setErrors] = useState({ name: "", email: "", phone: "" });
+  const navigate = useNavigate();
 
-    const handleNameChange = (e) => {
-       setName(e.target.value);
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (name === "") {
+      newErrors.name = "This field is required";
     }
-    const handleEmailChange = (e) => {
-       setEmail(e.target.value);
+    if (email === "") {
+      newErrors.email = "This field is required";
     }
-    const handlePhoneChange = (e) => {
-       setPhone(e.target.value);
+    if (phone === "") {
+      newErrors.phone = "This field is required";
     }
-    //store form data in an object
-    const formData = {
-        name:name,
-        email:email,
-        phone:phone
-    };
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if(formData.name === ''){
-            setErrorMessage('Name is required');
-            return;
-        }
-        if(formData.email === ''){
-            setErrorMessage('Email is required');
-            return;
-        }
-        if(formData.phone === ''){
-            setErrorMessage('Phone is required');
-            return; 
-        }  
-        // console.log(formData);
-        setName('');
-        setEmail('');
-        setPhone('');
-        navigate('/select-plan');
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const isValid = validateForm();
+    if (isValid) {
+      setName("");
+      setEmail("");
+      setPhone("");
+      navigate("/select-plan");
     }
-    return(
-        <form id="form" class="form-group" onSubmit={handleSubmit}>
-            <Input labelName="Name" id="name" placeholder="e.g. Stephen King" type="text" onChange={handleNameChange} value={name} />
-            <Input labelName="Email Address" id="email" placeholder="e.g. stephenking@lorem.com" type="email" onChange={handleEmailChange} value={email} />
-            <Input labelName="Phone" id="phone" placeholder="e.g. +1 999-999-9999" type="tel" onChange={handlePhoneChange} value={phone} />
-            {<p className="error-message">{errorMessage}</p>}
-            <div className="form-buttons single-btn">
-                <Button type="submit" className="btn">Next Step</Button>
-            </div>
-        </form>
-    );
-}
+  };
+
+  return (
+    <form id="form" className="form-group" onSubmit={handleSubmit}>
+      <Input
+        labelName="Name"
+        id="name"
+        placeholder="e.g. Stephen King"
+        type="text"
+        onChange={handleNameChange}
+        value={name}
+        error={errors.name}
+        hasError={errors.name !== ""}
+      />
+      <Input
+        labelName="Email Address"
+        id="email"
+        placeholder="e.g. stephenking@lorem.com"
+        type="email"
+        onChange={handleEmailChange}
+        value={email}
+        error={errors.email}
+        hasError={errors.email !== ""}
+      />
+      <Input
+        labelName="Phone"
+        id="phone"
+        placeholder="e.g. +1 999-999-9999"
+        type="tel"
+        onChange={handlePhoneChange}
+        value={phone}
+        error={errors.phone}
+        hasError={errors.phone !== ""}
+      />
+      <div className="form-buttons single-btn">
+        <Button type="submit" className="btn">
+          Next Step
+        </Button>
+      </div>
+    </form>
+  );
+};
 export default Form;
