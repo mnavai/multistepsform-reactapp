@@ -9,34 +9,13 @@ import MainWrapper from "../components/MainWrapper/MainWrapper";
 import Toggle from "../components/Toggle/Toggle";
 
 const SelectPlan = () => {
-    //const [card, setCard] = useState({});
-    // const [arcadeCardSelected, setArcadeCardSelected] = useState(false);
-    // const [advancedCardSelected, setAdvancedCardSelected] = useState(false);
-    // const [proCardSelected, setProCardSelected] = useState(false);
-    
-    // const handleClickArcade = (e) => { 
-    //     setArcadeCardSelected(!arcadeCardSelected);
-    //     setAdvancedCardSelected(false);
-    //     setProCardSelected(false);
- 
-    // }
-    // const handleClickAdvanced = (e) => { 
-    //     setAdvancedCardSelected(!advancedCardSelected);
-    //     setArcadeCardSelected(false);
-    //     setProCardSelected(false);  
-    // }
-    // const handleClickPro = (e) => { 
-    //     setProCardSelected(!proCardSelected);
-    //     setAdvancedCardSelected(false);
-    //     setArcadeCardSelected(false);   
-    // }
+  
     const [selectedCard, setSelectedCard] = useState(null);
 
     const handleClickCard = (cardData) => {
         setSelectedCard(cardData);
         console.log(cardData);
     };
-
     return(
         <AppLayout>
             <Slidebar />
