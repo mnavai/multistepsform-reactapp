@@ -10,25 +10,33 @@ import Toggle from "../components/Toggle/Toggle";
 
 const SelectPlan = () => {
     //const [card, setCard] = useState({});
-    const [arcadeCardSelected, setArcadeCardSelected] = useState(false);
-    const [advancedCardSelected, setAdvancedCardSelected] = useState(false);
-    const [proCardSelected, setProCardSelected] = useState(false);
+    // const [arcadeCardSelected, setArcadeCardSelected] = useState(false);
+    // const [advancedCardSelected, setAdvancedCardSelected] = useState(false);
+    // const [proCardSelected, setProCardSelected] = useState(false);
+    
+    // const handleClickArcade = (e) => { 
+    //     setArcadeCardSelected(!arcadeCardSelected);
+    //     setAdvancedCardSelected(false);
+    //     setProCardSelected(false);
+ 
+    // }
+    // const handleClickAdvanced = (e) => { 
+    //     setAdvancedCardSelected(!advancedCardSelected);
+    //     setArcadeCardSelected(false);
+    //     setProCardSelected(false);  
+    // }
+    // const handleClickPro = (e) => { 
+    //     setProCardSelected(!proCardSelected);
+    //     setAdvancedCardSelected(false);
+    //     setArcadeCardSelected(false);   
+    // }
+    const [selectedCard, setSelectedCard] = useState(null);
 
-    const handleClickArcade = (e) => { 
-        setArcadeCardSelected(!arcadeCardSelected);
-        setAdvancedCardSelected(false);
-        setProCardSelected(false);
-    }
-    const handleClickAdvanced = (e) => { 
-        setAdvancedCardSelected(!advancedCardSelected);
-        setArcadeCardSelected(false);
-        setProCardSelected(false);  
-    }
-    const handleClickPro = (e) => { 
-        setProCardSelected(!proCardSelected);
-        setAdvancedCardSelected(false);
-        setArcadeCardSelected(false);   
-    }
+    const handleClickCard = (cardData) => {
+        setSelectedCard(cardData);
+        console.log(cardData);
+    };
+
     return(
         <AppLayout>
             <Slidebar />
@@ -36,27 +44,29 @@ const SelectPlan = () => {
                 <HeadingGroup heading="Select your plan" ptag="You have the option monthly or yearly billing." />
                 <div id="form" className="form-class">
                     <div className="card-group">
-                        <Card src="assets/images/icon-arcade.svg"
+                        <Card id={1}
+                            src="assets/images/icon-arcade.svg"
                             altText="arcade icon"
                             label="Arcade"
                             price="$9/mon"
-                            onClick={handleClickArcade}
-                            cardSelected={arcadeCardSelected}
+                            onClick={() => handleClickCard({ label: "Arcade", price: "$9/mon" })}
+                            cardSelected={selectedCard === 1}
                             />
-                        <Card src="assets/images/icon-advanced.svg" 
+                        <Card id={2}
+                            src="assets/images/icon-advanced.svg" 
                             altText="advanced icon"
                             label="Advanced"
                             price="$12/mon"
-                            onClick={handleClickAdvanced}
-                            cardSelected={advancedCardSelected}
+                            onClick={() => handleClickCard({ label: "Advanced", price: "$12/mon" })}
+                            cardSelected={selectedCard === 2}
                             />
-                        <Card
+                        <Card id={3}
                             src="assets/images/icon-pro.svg"
                             altText="pro icon"
                             label="Pro"
                             price="$15/mon"
-                            onClick={handleClickPro}
-                            cardSelected={proCardSelected}    
+                            onClick={() => handleClickCard({ label: "Pro", price: "$15/mon" })}
+                            cardSelected={selectedCard === 3}
                             />
                     </div>
                     <Toggle monthly="Monthly" yearly="Yearly" />
