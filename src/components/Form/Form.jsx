@@ -9,6 +9,7 @@ const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [submitted,setSubmitted] = useState(false);
   const navigate = useNavigate();
 
   const handleNameChange = (e) => {
@@ -28,6 +29,7 @@ const Form = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSubmitted(true);
     if(!validateForm()){
       setName("");
       setEmail("");
@@ -45,7 +47,7 @@ const Form = () => {
         type="text"
         onChange={handleNameChange}
         value={name}
-        error={name === "" ? "This field is required" : ""}
+        error={!name && submitted ? "This field is required" : ""}
       />
       <Input
         labelName="Email Address"
@@ -54,7 +56,7 @@ const Form = () => {
         type="email"
         onChange={handleEmailChange}
         value={email}
-        error={email === "" ? "This field is required" : ""}
+        error={!email && submitted ? "This field is required" : ""}
       />
       <Input
         labelName="Phone"
@@ -63,7 +65,7 @@ const Form = () => {
         type="tel"
         onChange={handlePhoneChange}
         value={phone}
-        error={phone === "" ? "This field is required" : ""}
+        error={!phone && submitted ? "This field is required" : ""}
       />
       <div className="form-buttons single-btn">
         <Button type="submit" className="btn">
