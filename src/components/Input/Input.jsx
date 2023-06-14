@@ -1,7 +1,7 @@
 import "./Input.css";
 
 const Input = ({ id, labelName, type, placeholder, onChange, value, error }) => {
- 
+  const hasError = value === "" && error !== "";
 
   return (
     <div className="field-group">
@@ -9,12 +9,12 @@ const Input = ({ id, labelName, type, placeholder, onChange, value, error }) => 
         <label className="form-label" htmlFor={id}>
           {labelName}
         </label>
-        {value === "" && <label className="error-text">{error}</label>}
+        {hasError && <label className="error-text">{error}</label>}
       </div>
       <input
         type={type}
         id={id}
-        className={`form-input ${value === "" ? 'form-input-error' : ''}`}
+        className={hasError ? "form-input-error" : "form-input"}
         placeholder={placeholder}
         onChange={onChange}
         value={value}
