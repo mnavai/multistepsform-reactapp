@@ -16,7 +16,6 @@
 .error-text {
     color: rgb(237, 53, 72);
     padding-bottom: 0.2rem;
-    
 }
 .form-input {
     height: 2.5rem;
@@ -24,4 +23,11 @@
     border-radius: 0.3rem;
     padding: 0.5rem;
     border-color: rgb(214, 217, 230);
+}
+.form-input-error{
+    height: 2.5rem;
+    width: 27rem;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    border-color: rgb(237, 53, 72);
 }
