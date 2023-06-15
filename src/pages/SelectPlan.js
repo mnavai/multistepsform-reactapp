@@ -28,7 +28,7 @@ const SelectPlan = () => {
                             altText="arcade icon"
                             label="Arcade"
                             price="$9/mon"
-                            onClick={() => handleClickCard({ label: "Arcade", price: "$9/mon" })}
+                            onClick={() => handleClickCard({ label: "Arcade", price: 9 })}
                             cardSelected={selectedCard === 1}
                             />
                         <Card id={2}
@@ -36,7 +36,7 @@ const SelectPlan = () => {
                             altText="advanced icon"
                             label="Advanced"
                             price="$12/mon"
-                            onClick={() => handleClickCard({ label: "Advanced", price: "$12/mon" })}
+                            onClick={() => handleClickCard({ label: "Advanced", price: 12 })}
                             cardSelected={selectedCard === 2}
                             />
                         <Card id={3}
@@ -44,7 +44,7 @@ const SelectPlan = () => {
                             altText="pro icon"
                             label="Pro"
                             price="$15/mon"
-                            onClick={() => handleClickCard({ label: "Pro", price: "$15/mon" })}
+                            onClick={() => handleClickCard({ label: "Pro", price: 15 })}
                             cardSelected={selectedCard === 3}
                             />
                     </div>
