@@ -29,8 +29,9 @@ html, body, h1, h2, h3, h4, h5, p {
 .App{
     display: flex;
     justify-content: center;
-    /* background-color: hsl(213, 96%, 18%); */
     background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: .5rem;
     width:70vw;
     height: 70vh;
     padding: 2rem 0 2rem 0;
