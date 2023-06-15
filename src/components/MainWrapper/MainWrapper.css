@@ -29,14 +29,50 @@
 }
 .selected-plan {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 2rem;
+}
+.plan-text-group{
+    display: flex;
+    flex-direction: column;
 }
 .bill-container {
     height: 35vh;
     width: 23vw;
-    background-color: hsl(210, 5%, 91%);
     margin: 1rem auto 0 8rem;
+}
+.plan-details-container{
+    height: 25vh;
+    border-radius: .5rem;
+    background-color: hsl(210, 5%, 91%);
+}
+.selected-addons {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 1rem 2rem;
+}
+.addons-p{
+    padding: .5rem 0 .5rem 0;
+}
+.addons-price{
+    padding: .5rem 0 .5rem 0;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+}
+.total-heading{
+    padding: 1rem 2rem 1rem 2rem;
+}
+.total-price{
+    color: blue;
+    padding: 1rem 2rem 1rem 2rem;
+}
+.addon-text-group{
+    display: flex;
+    justify-content: space-between;
 }
 .checkbox-group {
     height: 35vh;

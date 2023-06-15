@@ -15,16 +15,29 @@ const Summary = () => {
                         ptag="Double-check everything looks ok before confirming." />
                 <div id="form" className="form-class">
                     <div className="bill-container">
-                        <div className="selected-plan">
-                            <div class="plan"></div>
-                            <Link to="/select-plan">Change</Link>
+                        <div className="plan-details-container">
+                            <div className="selected-plan">
+                                <div class="plan-text-group">
+                                    <div class="plan">Arcade (monthly)</div>
+                                    <Link to="/select-plan">Change</Link>
+                                </div>
+                                <div className="plan-price">$9/mon</div>
+                            </div>
+                            <hr />
+                            <div className="selected-addons">
+                                <div className="addon-text-group">
+                                    <p className="addons-p">Online Service</p>
+                                    <p className="addons-price">+$1/mon</p>
+                                </div>
+                                <div className="addon-text-group">
+                                    <p className="addons-p">Larger Storage</p>
+                                    <p className="addons-price">+$2/mon</p>
+                                </div>
+                            </div>
                         </div>
-                        <hr />
-                        <div className="selected-addons">
-
-                        </div>
-                        <div className="total-price">
-
+                        <div className="total">
+                            <h1 className="total-heading">Total (per month)</h1>
+                            <p className="total-price">+$12/mon</p>
                         </div>
                     </div>
                     <div className="form-buttons">
