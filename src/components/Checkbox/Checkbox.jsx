@@ -1,9 +1,9 @@
 import './Checkbox.css';
-const Checkbox = ({label,text,price}) => {
+const Checkbox = ({label,text,price,onChange,id,selectedCheckbox}) => {
     return(
-        <div className="checkbox-container">
-            <div className="checkbox">
-                <input type="checkbox" id="checkbox" className="checkbox-class" />
+        <div className={`checkbox-container ${selectedCheckbox ? "selected" : ""}`} data-checkboxid={id} >
+            <div className="checkbox" >
+                <input type="checkbox" id="checkbox" className="checkbox-class" onChange={onChange} />
             </div>
             <div className="text-wrapper">
                 <h5 className="checkbox-label">{label}</h5>
