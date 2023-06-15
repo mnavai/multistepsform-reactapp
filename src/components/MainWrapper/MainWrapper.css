@@ -43,3 +43,21 @@
     width: 22vw;
     margin: 2rem auto 0 8rem;
 }
+.finalmessage-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.thank-you-heading{
+    color: rgb(2, 41, 90);
+    font-size: 2rem;
+    padding: 2rem;
+}
+.thank-you-p{
+    color:hsl(231, 11%, 63%);
+    text-align: center;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}

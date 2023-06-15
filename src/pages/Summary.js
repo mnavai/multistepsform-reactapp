@@ -29,7 +29,7 @@ const Summary = () => {
                     </div>
                     <div className="form-buttons">
                         <Link to="/add-ons"><Button type="submit" className="btn-goback">Go Back</Button></Link>
-                        <Link to="/"><Button type="submit" className="btn">Home</Button></Link>
+                        <Link to="/thank-you"><Button type="submit" className="btn">Confirm</Button></Link>
                     </div>
                 </div>
             </MainWrapper>
