@@ -27,10 +27,15 @@
     width: 22vw;
     margin: 0 auto 0 8rem;
 }
+.selected-plan {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
 .bill-container {
     height: 35vh;
     width: 23vw;
-    background-color: rgb(201, 199, 199);
+    background-color: hsl(210, 5%, 91%);
     margin: 1rem auto 0 8rem;
 }
 .checkbox-group {

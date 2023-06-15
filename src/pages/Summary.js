@@ -15,9 +15,17 @@ const Summary = () => {
                         ptag="Double-check everything looks ok before confirming." />
                 <div id="form" className="form-class">
                     <div className="bill-container">
-                        <div className="selected-plan"></div>
-                        <div className="selected-addons"></div>
-                        <div className="total-price"></div>
+                        <div className="selected-plan">
+                            <div class="plan"></div>
+                            <Link to="/select-plan">Change</Link>
+                        </div>
+                        <hr />
+                        <div className="selected-addons">
+
+                        </div>
+                        <div className="total-price">
+
+                        </div>
                     </div>
                     <div className="form-buttons">
                         <Link to="/add-ons"><Button type="submit" className="btn-goback">Go Back</Button></Link>
