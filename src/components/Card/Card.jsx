@@ -3,7 +3,7 @@ import './Card.css';
 const Card = ({src, altText, label, price, onClick, cardSelected, id}) => {
     
     return(
-        <div className={`card ${cardSelected ? "selected" : ""}`} onClick={onClick} cardId={id}>
+        <div className={`card ${cardSelected ? "selected" : ""}`} onClick={onClick} data-cardId={id}>
             <div className="icon">
                 <img src={src} alt={altText}/>
             </div>
