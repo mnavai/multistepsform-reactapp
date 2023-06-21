@@ -4,6 +4,8 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import HeadingGroup from "../components/HeadingGroup/HeadingGroup";
 import AppLayout from "../components/AppLayout/AppLayout";
 import MainWrapper from "../components/MainWrapper/MainWrapper";
+import { useContext } from "react";
+import { CardContext } from "../context/CardContext";
 
 const Summary = () => {
     return (
@@ -18,7 +20,7 @@ const Summary = () => {
                         <div className="plan-details-container">
                             <div className="selected-plan">
                                 <div class="plan-text-group">
-                                    <div class="plan">Arcade (monthly)</div>
+                                    <div class="plan"><h4>{selectPlan}/{toggleSelection}</h4></div>
                                     <Link to="/select-plan">Change</Link>
                                 </div>
                                 <div className="plan-price">$9/mon</div>

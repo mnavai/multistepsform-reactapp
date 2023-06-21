@@ -3,17 +3,20 @@ import HeadingGroup from "../components/HeadingGroup/HeadingGroup";
 import Slidebar from "../components/Sidebar/Sidebar";
 import Card from "../components/Card/Card";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import AppLayout from "../components/AppLayout/AppLayout";
 import MainWrapper from "../components/MainWrapper/MainWrapper";
 import Toggle from "../components/Toggle/Toggle";
+import { CardContext } from "../context/CardContext";
 
 const SelectPlan = () => {
-  
+    const { setSelectedCards, setCardPrice, setToggleSelection } = useContext(CardContext);
     const [selectedCard, setSelectedCard] = useState(null);
 
     const handleClickCard = (cardData) => {
         setSelectedCard(cardData);
+        setSelectedCards(cardData.label);
+        setCardPrice(cardData.price);
         console.log(cardData);
     };
     return(
