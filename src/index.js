@@ -4,13 +4,16 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import { CardProvider } from './context/CardContext';
+import { CheckBoxProvider } from './context/CheckBoxContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <CardProvider>
-        <App />
+        <CheckBoxProvider>
+          <App />
+        </CheckBoxProvider>
       </CardProvider>
     </BrowserRouter>
   </React.StrictMode>
