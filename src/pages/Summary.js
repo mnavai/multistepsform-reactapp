@@ -11,6 +11,7 @@ import { CheckBoxContext } from "../context/CheckBoxContext";
 const Summary = () => {
     const { selectCards, toggleSelection, cardPrice } = useContext(CardContext);
     const { selectService, servicePrice } = useContext(CheckBoxContext);
+    
     return (
         <AppLayout>
             <Sidebar />
@@ -33,10 +34,6 @@ const Summary = () => {
                                 <div className="addon-text-group">
                                     <p className="addons-p">{selectService}</p>
                                     <p className="addons-price">{servicePrice}/mon</p>
-                                </div>
-                                <div className="addon-text-group">
-                                    <p className="addons-p">Larger Storage</p>
-                                    <p className="addons-price">+$2/mon</p>
                                 </div>
                             </div>
                         </div>

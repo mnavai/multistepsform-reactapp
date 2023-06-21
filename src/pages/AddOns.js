@@ -5,18 +5,40 @@ import HeadingGroup from "../components/HeadingGroup/HeadingGroup";
 import Checkbox from "../components/Checkbox/Checkbox";
 import AppLayout from "../components/AppLayout/AppLayout";
 import MainWrapper from "../components/MainWrapper/MainWrapper";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { CheckBoxContext } from "../context/CheckBoxContext";
 
 const AddOns = () => {
-    const [ setSelectedService, setServicePrice] = useState(CheckBoxContext);
-    const [selectedCheckbox,setSelectedCheckbox] = useState(null);
+    const {setSelectedService, setServicePrice}  = useContext(CheckBoxContext);
+    const [selectedCheckbox,setSelectedCheckbox] = useState([]);
 
     const handleOnChange = (checkboxData) => {
-        setSelectedCheckbox(checkboxData);
-        setSelectedService(checkboxData.label);
-        setServicePrice(checkboxData.price);
-        console.log(checkboxData);
+
+        const checkboxArray = [...selectedCheckbox];
+
+        const index = checkboxArray.findIndex(
+            (checkbox) => checkbox.label === checkboxData.label
+        );
+        if (index === -1) {
+            checkboxArray.push(checkboxData);
+        } else {
+            checkboxArray.splice(index,1);
+        }
+        setSelectedCheckbox((prevState) => [...prevState, ...checkboxArray]);
+
+        if (checkboxArray.length > 0) {
+            const lastSelectedCheckbox = checkboxArray[
+            checkboxArray.length - 1
+        ];
+            setSelectedService(lastSelectedCheckbox.label);
+            setServicePrice(lastSelectedCheckbox.price);
+        } else {
+            setSelectedService(null);
+            setServicePrice(null);
+        }
+        // setSelectedService(checkboxData.label);
+        // setServicePrice(checkboxData.price);
+        console.log(selectedCheckbox);
     }
     return (
         <AppLayout>
