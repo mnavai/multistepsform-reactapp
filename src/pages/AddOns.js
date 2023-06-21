@@ -6,12 +6,16 @@ import Checkbox from "../components/Checkbox/Checkbox";
 import AppLayout from "../components/AppLayout/AppLayout";
 import MainWrapper from "../components/MainWrapper/MainWrapper";
 import { useState } from "react";
+import { CheckBoxContext } from "../context/CheckBoxContext";
 
 const AddOns = () => {
+    const [ setSelectedService, setServicePrice] = useState(CheckBoxContext);
     const [selectedCheckbox,setSelectedCheckbox] = useState(null);
 
     const handleOnChange = (checkboxData) => {
         setSelectedCheckbox(checkboxData);
+        setSelectedService(checkboxData.label);
+        setServicePrice(checkboxData.price);
         console.log(checkboxData);
     }
     return (

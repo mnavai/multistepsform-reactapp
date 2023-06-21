@@ -6,9 +6,11 @@ import AppLayout from "../components/AppLayout/AppLayout";
 import MainWrapper from "../components/MainWrapper/MainWrapper";
 import { useContext } from "react";
 import { CardContext } from "../context/CardContext";
+import { CheckBoxContext } from "../context/CheckBoxContext";
 
 const Summary = () => {
     const { selectCards, toggleSelection, cardPrice } = useContext(CardContext);
+    const { selectService, servicePrice } = useContext(CheckBoxContext);
     return (
         <AppLayout>
             <Sidebar />
@@ -29,8 +31,8 @@ const Summary = () => {
                             <hr />
                             <div className="selected-addons">
                                 <div className="addon-text-group">
-                                    <p className="addons-p">Online Service</p>
-                                    <p className="addons-price">+$1/mon</p>
+                                    <p className="addons-p">{selectService}</p>
+                                    <p className="addons-price">{servicePrice}/mon</p>
                                 </div>
                                 <div className="addon-text-group">
                                     <p className="addons-p">Larger Storage</p>
@@ -40,7 +42,7 @@ const Summary = () => {
                         </div>
                         <div className="total">
                             <h1 className="total-heading">Total (per month)</h1>
-                            <p className="total-price">+$12/mon</p>
+                            <p className="total-price"></p>
                         </div>
                     </div>
                     <div className="form-buttons">
