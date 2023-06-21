@@ -10,7 +10,7 @@ import Toggle from "../components/Toggle/Toggle";
 import { CardContext } from "../context/CardContext";
 
 const SelectPlan = () => {
-    const { setSelectedCards, setCardPrice, setToggleSelection } = useContext(CardContext);
+    const { setSelectedCards, setCardPrice } = useContext(CardContext);
     const [selectedCard, setSelectedCard] = useState(null);
 
     const handleClickCard = (cardData) => {

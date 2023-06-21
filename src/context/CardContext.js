@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const CardContext = createContext({
     selectCards: "",
     setSelectedCards: () => {},
-    cardPrice: "",
+    cardPrice: 0,
     setCardPrice: () => {},
     toggleSelection: "Monthly",
     setToggleSelection: () => {},
@@ -17,6 +17,6 @@ export const CardProvider = ({children}) => {
     const value = {selectCards, setSelectedCards, cardPrice, setCardPrice, toggleSelection, setToggleSelection};
 
     return (
-        <CardContext.Provider value={value}></CardContext.Provider>
+        <CardContext.Provider value={value}>{children}</CardContext.Provider>
     )
  }

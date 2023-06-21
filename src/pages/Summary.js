@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { CardContext } from "../context/CardContext";
 
 const Summary = () => {
+    const { selectCards, toggleSelection, cardPrice } = useContext(CardContext);
     return (
         <AppLayout>
             <Sidebar />
@@ -20,10 +21,10 @@ const Summary = () => {
                         <div className="plan-details-container">
                             <div className="selected-plan">
                                 <div class="plan-text-group">
-                                    <div class="plan"><h4>{selectPlan}/{toggleSelection}</h4></div>
+                                    <div class="plan"><h4>{selectCards}</h4></div>
                                     <Link to="/select-plan">Change</Link>
                                 </div>
-                                <div className="plan-price">$9/mon</div>
+                                <div className="plan-price">{cardPrice}/{toggleSelection}</div>
                             </div>
                             <hr />
                             <div className="selected-addons">
