@@ -10,7 +10,7 @@ import { CheckBoxContext } from "../context/CheckBoxContext";
 
 const Summary = () => {
     const { selectCards, toggleSelection, cardPrice } = useContext(CardContext);
-    const { selectService, servicePrice } = useContext(CheckBoxContext);
+    const { selectedServices } = useContext(CheckBoxContext);
     
     return (
         <AppLayout>
@@ -32,8 +32,16 @@ const Summary = () => {
                             <hr />
                             <div className="selected-addons">
                                 <div className="addon-text-group">
-                                    <p className="addons-p">{selectService}</p>
-                                    <p className="addons-price">{servicePrice}/mon</p>
+                                    {selectedServices.length > 0 ? (
+                                        selectedServices.map((service, index) => (
+                                        <div key={index} className="addon">
+                                            <p className="addons-p">{service.service}</p>
+                                            <p className="addons-price">+{service.price}/mon</p>
+                                        </div>
+                                        ))
+                                    ) : (
+                                        <p>No add-ons selected.</p>
+                                    )}
                                 </div>
                             </div>
                         </div>
