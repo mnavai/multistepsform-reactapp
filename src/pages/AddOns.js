@@ -9,37 +9,21 @@ import { useState, useContext } from "react";
 import { CheckBoxContext } from "../context/CheckBoxContext";
 
 const AddOns = () => {
-    const {setSelectedService, setServicePrice}  = useContext(CheckBoxContext);
+    const {addSelectedService}  = useContext(CheckBoxContext);
     const [selectedCheckbox,setSelectedCheckbox] = useState([]);
 
     const handleOnChange = (checkboxData) => {
-
-        const checkboxArray = [...selectedCheckbox];
-
-        const index = checkboxArray.findIndex(
-            (checkbox) => checkbox.label === checkboxData.label
-        );
-        if (index === -1) {
-            checkboxArray.push(checkboxData);
+        if (selectedCheckbox.includes(checkboxData.label)) {
+            setSelectedCheckbox((prevSelected) =>
+            prevSelected.filter((selected) => selected !== checkboxData.label)
+            );
+            addSelectedService(checkboxData.label, 0); // Remove the service from the context
         } else {
-            checkboxArray.splice(index,1);
+            setSelectedCheckbox((prevSelected) => [...prevSelected, checkboxData.label]);
+            addSelectedService(checkboxData.label, checkboxData.price); // Add the service to the context with its price
         }
-        setSelectedCheckbox((prevState) => [...prevState, ...checkboxArray]);
+    };
 
-        if (checkboxArray.length > 0) {
-            const lastSelectedCheckbox = checkboxArray[
-            checkboxArray.length - 1
-        ];
-            setSelectedService(lastSelectedCheckbox.label);
-            setServicePrice(lastSelectedCheckbox.price);
-        } else {
-            setSelectedService(null);
-            setServicePrice(null);
-        }
-        // setSelectedService(checkboxData.label);
-        // setServicePrice(checkboxData.price);
-        console.log(selectedCheckbox);
-    }
     return (
         <AppLayout>
           <Sidebar />

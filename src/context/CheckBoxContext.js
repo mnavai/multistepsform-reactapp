@@ -1,17 +1,23 @@
 import { useState, createContext } from "react";
 
 export const CheckBoxContext = createContext({
-    selectService: "",
-    setSelectedService: () => {},
-    servicePrice: 0,
-    setServicePrice: () => {},
-})
+    selectedServices: [], 
+    addSelectedService: () => {}
+});
 
 export const CheckBoxProvider = ({children}) => {
-    const [selectService, setSelectedService] = useState("");
-    const [servicePrice, setServicePrice] = useState(0);
+    const [selectedServices, setSelectedServices] = useState([]);
 
-    const value = {selectService, setSelectedService, servicePrice, setServicePrice};
+    const addSelectedService =  (service, price) => {
+        setSelectedServices(
+            (prevServices) => [
+                ...prevServices,
+                { service, price },
+            ]
+        )
+    }
+
+    const value = {selectedServices, addSelectedService};
 
     return <CheckBoxContext.Provider value={value}>{children}</CheckBoxContext.Provider>
 }
