@@ -11,6 +11,8 @@ import { CheckBoxContext } from "../context/CheckBoxContext";
 const Summary = () => {
     const { selectCards, toggleSelection, cardPrice } = useContext(CardContext);
     const { selectedServices } = useContext(CheckBoxContext);
+
+    const totalPrice = selectedServices.reduce((total, service) => total + service.price, cardPrice);
     
     return (
         <AppLayout>
@@ -47,7 +49,7 @@ const Summary = () => {
                         </div>
                         <div className="total">
                             <h1 className="total-heading">Total (per month)</h1>
-                            <p className="total-price"></p>
+                            <p className="total-price">${totalPrice}</p>
                         </div>
                     </div>
                     <div className="form-buttons">
