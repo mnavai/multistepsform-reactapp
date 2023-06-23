@@ -12,7 +12,7 @@ const Summary = () => {
     const { width, height } = useWindowSize();
     return (
         <AppLayout>
-            <Sidebar />
+            <Sidebar currentStep="5" />
             <MainWrapper>
                 <div id="form" className="form-class">
                     <div className="finalmessage-container">

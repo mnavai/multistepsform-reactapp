@@ -26,7 +26,7 @@ const AddOns = () => {
 
     return (
         <AppLayout>
-          <Sidebar />
+          <Sidebar currentStep="3" />
           <MainWrapper>
             <HeadingGroup heading="Pick add-ons" ptag="Add-ons help enhance your gaming experience." />
             <div id="form" className="form-class">

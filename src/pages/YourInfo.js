@@ -7,7 +7,7 @@ import MainWrapper from "../components/MainWrapper/MainWrapper";
 const YourInfo = () => {
     return(
         <AppLayout>
-            <Sidebar />
+            <Sidebar currentStep="1" />
             <MainWrapper>
                 <HeadingGroup heading="Personal Info" ptag="Please provide your name, email address, and phone number." />
                 <div id="form" className="form-class">

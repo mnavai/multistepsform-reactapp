@@ -1,8 +1,9 @@
 import './SidebarLink.css';
-const SidebarLink = ({step, text}) => {
+const SidebarLink = ({step, text, currentStep}) => {
+    const isActive = step === currentStep;
     return(
             <li className="list-items">
-                <div className="circle-icon active">
+                <div className={`circle-icon ${isActive ? 'active' : ''}`}>
                     <span>
                         {step}
                     </span>   

@@ -16,7 +16,7 @@ const Summary = () => {
     
     return (
         <AppLayout>
-            <Sidebar />
+            <Sidebar currentStep="4" />
             <MainWrapper>
                 <HeadingGroup 
                         heading="Finishing up" 

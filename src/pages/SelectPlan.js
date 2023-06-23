@@ -21,7 +21,7 @@ const SelectPlan = () => {
     };
     return(
         <AppLayout>
-            <Slidebar />
+            <Slidebar currentStep="2" />
             <MainWrapper>
                 <HeadingGroup heading="Select your plan" ptag="You have the option monthly or yearly billing." />
                 <div id="form" className="form-class">
