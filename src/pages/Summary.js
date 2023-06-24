@@ -29,7 +29,7 @@ const Summary = () => {
                                     <div class="plan"><h4>{selectCards}</h4></div>
                                     <Link to="/select-plan">Change</Link>
                                 </div>
-                                <div className="plan-price">{cardPrice}/{toggleSelection}</div>
+                                <div className="plan-price">+{cardPrice}/{toggleSelection}</div>
                             </div>
                             <hr />
                             <div className="selected-addons">
@@ -38,7 +38,7 @@ const Summary = () => {
                                         selectedServices.map((service, index) => (
                                         <div key={index} className="addon">
                                             <p className="addons-p">{service.service}</p>
-                                            <p className="addons-price">+{service.price}/mon</p>
+                                            <p className="addons-price">+{service.price}/Mon</p>
                                         </div>
                                         ))
                                     ) : (
@@ -48,7 +48,7 @@ const Summary = () => {
                             </div>
                         </div>
                         <div className="total">
-                            <h1 className="total-heading">Total (per month)</h1>
+                            <h1 className="total-heading">Total (Per month)</h1>
                             <p className="total-price">${totalPrice}</p>
                         </div>
                     </div>
