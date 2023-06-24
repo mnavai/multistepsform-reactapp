@@ -43,11 +43,11 @@ const Summary = () => {
                         height={height}
                         recycle={false} // Disable recycling of confetti particles
                         run={showConfetti} // Start the confetti animation
-                        numberOfPieces={200} // Number of confetti pieces
-                        gravity={0.5} // Gravity factor (affects falling speed)
+                        numberOfPieces={600} // Number of confetti pieces
+                        gravity={0.3} // Gravity factor (affects falling speed)
                         wind={0.1} // Wind factor (affects horizontal movement)
                         initialVelocityX={10} // Initial horizontal velocity
-                        initialVelocityY={20} // Initial vertical velocity
+                        initialVelocityY={15} // Initial vertical velocity
                         fadeOut={true} // Enable fading out of confetti
                         opacity={1} // Initial opacity of confetti pieces
                         recycleDelay={3000} // Time delay before recycling confetti pieces
