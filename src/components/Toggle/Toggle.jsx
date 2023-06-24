@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react"
 import "./Toggle.css";
+import { CardContext } from "../../context/CardContext";
 
 const Toggle = ({monthly,yearly}) => {
     const [toggleState,setToggleState] = useState(false);
+    const {setToggleSelection} = useContext(CardContext);
+
       const handleToggle = () => {
         setToggleState(!toggleState);
         let toggleStatus = monthly;
@@ -12,7 +15,7 @@ const Toggle = ({monthly,yearly}) => {
         else {
             toggleStatus = monthly;
         }
-        console.log(toggleStatus);
+        setToggleSelection(toggleStatus);
     }
     return(
         <div className="grey-bar">
