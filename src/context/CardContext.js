@@ -12,7 +12,7 @@ export const CardContext = createContext({
 export const CardProvider = ({children}) => {
     const [selectCards, setSelectedCards] = useState("");
     const [cardPrice, setCardPrice] = useState(0);
-    const [toggleSelection, setToggleSelection] = useState("Mon");
+    const [toggleSelection, setToggleSelection] = useState("mon");
 
     const value = {selectCards, setSelectedCards, cardPrice, setCardPrice, toggleSelection, setToggleSelection};
 

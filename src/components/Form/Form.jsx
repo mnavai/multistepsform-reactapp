@@ -2,6 +2,8 @@ import Input from "../Input/Input";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../Button/Button.jsx";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "../Button/Button.css";
 import "../Form/Form.css";
 
@@ -30,6 +32,15 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
+    toast.success('Form submitted successfully!', {
+      position: 'top-center',
+      autoClose: 30,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
     if(!validateForm()){
       setName("");
       setEmail("");

@@ -38,7 +38,7 @@ const Summary = () => {
                                         selectedServices.map((service, index) => (
                                         <div key={index} className="addon">
                                             <p className="addons-p">{service.service}</p>
-                                            <p className="addons-price">+{service.price}/Mon</p>
+                                            <p className="addons-price">+{service.price}/mon</p>
                                         </div>
                                         ))
                                     ) : (

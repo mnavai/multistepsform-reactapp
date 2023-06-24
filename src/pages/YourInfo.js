@@ -3,6 +3,8 @@ import HeadingGroup  from "../components/HeadingGroup/HeadingGroup";
 import Form from "../components/Form/Form";
 import AppLayout from "../components/AppLayout/AppLayout";
 import MainWrapper from "../components/MainWrapper/MainWrapper";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const YourInfo = () => {
     return(
@@ -13,6 +15,7 @@ const YourInfo = () => {
                 <div id="form" className="form-class">
                     <Form />
                 </div>
+                <ToastContainer />
             </MainWrapper>
         </AppLayout>    
     );
