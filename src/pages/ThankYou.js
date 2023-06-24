@@ -2,14 +2,24 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import AppLayout from "../components/AppLayout/AppLayout";
 import MainWrapper from "../components/MainWrapper/MainWrapper";
 import React from 'react'
-
 import Confetti from 'react-confetti'
 import { useWindowSize } from 'react-use';
+import { useEffect, useState } from 'react';
 
 
 
 const Summary = () => {
     const { width, height } = useWindowSize();
+    const [showConfetti, setShowConfetti] = useState(false);
+
+    useEffect(() => {
+    // Show confetti for 5 seconds
+    setShowConfetti(true);
+    setTimeout(() => {
+      setShowConfetti(false);
+    }, 5000);
+    }, []);
+
     return (
         <AppLayout>
             <Sidebar currentStep="5" />
@@ -27,7 +37,22 @@ const Summary = () => {
                             <p>Thanks for confirming your subscription! We hope you have fun using our platform! If you ever need support, feel free to email us at support@loremgaming.com</p>
                         </div>
                     </div>
-                    <Confetti width={width} height={height} />
+                    {showConfetti && (
+                    <Confetti
+                        width={width}
+                        height={height}
+                        recycle={false} // Disable recycling of confetti particles
+                        run={showConfetti} // Start the confetti animation
+                        numberOfPieces={200} // Number of confetti pieces
+                        gravity={0.5} // Gravity factor (affects falling speed)
+                        wind={0.1} // Wind factor (affects horizontal movement)
+                        initialVelocityX={10} // Initial horizontal velocity
+                        initialVelocityY={20} // Initial vertical velocity
+                        fadeOut={true} // Enable fading out of confetti
+                        opacity={1} // Initial opacity of confetti pieces
+                        recycleDelay={3000} // Time delay before recycling confetti pieces
+                    />
+                    )}
                 </div>
             </MainWrapper>
         </AppLayout>

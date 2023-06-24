@@ -34,7 +34,7 @@ const Form = () => {
     setSubmitted(true);
     toast.success('Form submitted successfully!', {
       position: 'top-center',
-      autoClose: 30,
+      autoClose: 300,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
