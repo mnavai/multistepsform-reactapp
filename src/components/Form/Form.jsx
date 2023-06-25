@@ -30,19 +30,19 @@ const Form = () => {
       return name === "" || email === "" || phone === "";
   };
   const handleSubmit = (e) => {
-  e.preventDefault();
-  setSubmitted(true);
+    e.preventDefault();
+    setSubmitted(true);
 
-  if (validateForm()) {
-    toast.error("You need to fill in all required fields!", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    if (validateForm()) {
+      toast.error("You need to fill all required fields!", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } else {
       toast.success("Form submitted successfully!", {
         position: "top-center",
@@ -59,8 +59,6 @@ const Form = () => {
       navigate("/select-plan");
     }
   };
-
-
   return (
     <form id="form" className="form-group" onSubmit={handleSubmit}>
       <Input

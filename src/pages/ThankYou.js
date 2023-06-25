@@ -5,20 +5,20 @@ import React from 'react'
 import Confetti from 'react-confetti'
 import { useWindowSize } from 'react-use';
 import { useEffect, useState } from 'react';
-
-
+import { useNavigate } from "react-router-dom";
 
 const Summary = () => {
     const { width, height } = useWindowSize();
     const [showConfetti, setShowConfetti] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
-    // Show confetti for 5 seconds
     setShowConfetti(true);
     setTimeout(() => {
       setShowConfetti(false);
-    }, 5000);
-    }, []);
+      navigate("/");
+    }, 15000);
+    }, [navigate]);
 
     return (
         <AppLayout>
