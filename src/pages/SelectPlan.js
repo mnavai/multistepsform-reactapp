@@ -19,6 +19,7 @@ const SelectPlan = () => {
         setCardPrice(cardData.price);
         console.log(cardData);
     };
+
     return(
         <AppLayout>
             <Slidebar currentStep="2" />
@@ -31,24 +32,24 @@ const SelectPlan = () => {
                             altText="arcade icon"
                             label="Arcade"
                             price="$9/mon"
-                            onClick={() => handleClickCard({ label: "Arcade", price: 9 })}
-                            cardSelected={selectedCard === 1}
+                            onClick={() => handleClickCard({ id:1, label: "Arcade", price: 9 })}
+                            selectedCard={selectedCard}
                             />
                         <Card id={2}
                             src="assets/images/icon-advanced.svg" 
                             altText="advanced icon"
                             label="Advanced"
                             price="$12/mon"
-                            onClick={() => handleClickCard({ label: "Advanced", price: 12 })}
-                            cardSelected={selectedCard === 2}
+                            onClick={() => handleClickCard({ id:2, label: "Advanced", price: 12 })}
+                            selectedCard={selectedCard}
                             />
                         <Card id={3}
                             src="assets/images/icon-pro.svg"
                             altText="pro icon"
                             label="Pro"
                             price="$15/mon"
-                            onClick={() => handleClickCard({ label: "Pro", price: 15 })}
-                            cardSelected={selectedCard === 3}
+                            onClick={() => handleClickCard({ id:3, label: "Pro", price: 15 })}
+                            selectedCard={selectedCard}
                             />
                     </div>
                     <Toggle monthly="Monthly" yearly="Yearly" />
