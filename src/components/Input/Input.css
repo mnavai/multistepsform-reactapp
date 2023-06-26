@@ -39,4 +39,8 @@
     .field-group {
         margin: 1rem auto 1rem auto; 
     }
+    .form-input-error {
+        width: 70vw;
+        
+    }
 }

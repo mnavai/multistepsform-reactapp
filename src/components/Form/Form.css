@@ -6,12 +6,24 @@
     width:25vw;
     height: 30vh;
 }
-
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
 @media screen and (max-width:578px) {
     .form-group{
         width: 70vw;
         height: 90vh;
         margin-left: auto;
         margin-right: auto;
+    }
+    .form-buttons{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
     }
 }
