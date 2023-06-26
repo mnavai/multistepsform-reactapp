@@ -31,3 +31,9 @@
     padding: 0.5rem;
     border-color: rgb(237, 53, 72);
 }
+
+@media screen and (max-width:578px) {
+    .form-input{
+        width: 50vw;
+    }
+}

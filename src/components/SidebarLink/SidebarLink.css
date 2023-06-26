@@ -39,3 +39,19 @@
 .nav-p{
     color:white;
 }
+
+@media screen and (max-width:578px) {
+    ul{
+        display: flex;
+    }
+    .list-item-info{
+        display: none;
+        padding: .2rem;
+    }
+    .circle-icon{
+        width: 3rem;
+            /* Adjust the width for smaller screens */
+            height: 3rem;
+            /* Adjust the height for smaller screens */
+    }
+}

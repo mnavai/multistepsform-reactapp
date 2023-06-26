@@ -103,3 +103,9 @@
     padding-left: 6rem;
     padding-right: 6rem;
 }
+@media screen and (max-width:578px) {
+    .form-class{
+        margin: 2rem 0 2rem 0rem;
+        width: 32vw;
+    }
+}

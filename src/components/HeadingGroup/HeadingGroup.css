@@ -13,3 +13,15 @@
     font-weight: normal;
     color: hsl(231, 11%, 63%);
 }
+
+@media screen and (max-width:578px) {
+    .form-hgroup{
+        margin: 1rem 0 1rem 0rem;
+    }
+    .hgroup-heading {
+        font-size: 1.3rem;
+    }
+    .hgroup-p {
+        font-size: .8rem;
+    }
+}

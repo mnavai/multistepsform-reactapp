@@ -37,6 +37,13 @@ html, body, h1, h2, h3, h4, h5, p {
     padding: 2rem 0 2rem 0;
 }
 
+@media screen and (max-width:578px) {
+    .App{
+        flex-direction: column;
+        width: 80vw;
+        height: auto;
+    }
+}
 
 
 
