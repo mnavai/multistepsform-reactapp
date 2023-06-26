@@ -62,4 +62,9 @@
         width: 65px;
         height: 65px;
     }
+    .grey-bar {
+        margin: 0 auto 3.5rem auto;
+        width: 60vw;
+        height: 11vh;
+    }
 }

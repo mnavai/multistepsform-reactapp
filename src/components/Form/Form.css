@@ -11,8 +11,6 @@
     justify-content: space-between;
     width: 25vw;
     padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
 }
 @media screen and (max-width:578px) {
     .form-group{
@@ -25,5 +23,8 @@
         display: flex;
         justify-content: flex-end;
         width: 100%;
+        position: absolute;
+        bottom: 1rem;
+        right: .5rem;
     }
 }
