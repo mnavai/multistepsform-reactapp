@@ -115,4 +115,7 @@
         width: 80vw;
         height: 30vh;
     }
+    .form-hgroup{
+        margin-top: 1.5rem;
+    }
 }
