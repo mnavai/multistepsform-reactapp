@@ -16,7 +16,7 @@
 
 @media screen and (max-width:578px) {
     .form-hgroup{
-        margin: 1rem 0 1rem 0rem;
+        margin: .5rem 2rem .5rem 2rem;
     }
     .hgroup-heading {
         font-size: 1.3rem;

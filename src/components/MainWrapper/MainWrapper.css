@@ -104,8 +104,15 @@
     padding-right: 6rem;
 }
 @media screen and (max-width:578px) {
+    .main-section{
+        margin: -5rem auto 1rem auto;
+        border-radius: 1.2rem;
+        width: 80vw;
+        height: 70vh;
+    }
     .form-class{
-        margin: 2rem 0 2rem 0rem;
-        width: 32vw;
+        margin: 1rem auto 1rem auto;
+        width: 80vw;
+        height: 30vh;
     }
 }

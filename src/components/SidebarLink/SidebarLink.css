@@ -41,8 +41,13 @@
 }
 
 @media screen and (max-width:578px) {
+    .side-nav{
+        margin-left: auto;
+        margin-right: auto;
+    }
     ul{
         display: flex;
+        justify-content: center;
     }
     .list-item-info{
         display: none;
