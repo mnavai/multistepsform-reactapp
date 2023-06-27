@@ -45,7 +45,7 @@
         flex-direction: column;
         height: auto;
         width: 100%;
-        margin: 1rem auto 3rem auto;
+        margin: 1rem auto 1rem auto;
     }
     .card {
         display: flex;
