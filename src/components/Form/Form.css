@@ -31,4 +31,14 @@
         right: auto;
         left: auto;
     }
+    .btn{
+        margin-top: 1.5rem;
+        width: 5rem;
+        font-size: 10px;
+    }
+    .single-btn{
+        position: relative;
+        margin-top: 5rem;
+        
+    }
 }

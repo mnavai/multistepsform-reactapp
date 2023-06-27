@@ -41,6 +41,11 @@
     }
     .form-input-error {
         width: 70vw;
-        
+    }
+    .form-label{
+        font-size: .8rem;
+    }
+    .error-text {
+        font-size: .8rem;
     }
 }

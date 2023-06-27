@@ -68,4 +68,14 @@
         width: 60vw;
         height: 11vh;
     }
+    .card-label-text {
+        font-size: .8rem;
+    }
+    .card-text {
+        font-size: .8rem;
+    }
+    .text-group{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
 }
