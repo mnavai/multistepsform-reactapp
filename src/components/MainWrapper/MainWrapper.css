@@ -122,7 +122,21 @@
         margin-left: auto;
         margin-right: auto;
     }
-        
+    .bill-container {
+        height: 35vh;
+        width: 50vw;
+        margin: 1rem auto 0 auto;
+    }
+    .finalmessage-container {
+        margin-top: 3rem;
+    }
+    .thank-you-p {
+        color: hsl(231, 11%, 63%);
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 20px;
+    }
 }
 @media screen and (max-width:578px) {
     .main-section{
