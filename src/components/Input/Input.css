@@ -33,7 +33,23 @@
 }
 /* Tablet view */
 @media screen and (min-width:579px) and (max-width: 1180px) {
-
+    .form-input-error {
+        width: 50vw;
+    }
+    .form-input {
+        width: 50vw;
+        height: 3rem;
+    }
+    .field-group {
+        width: 50vw;
+    }
+    .form-label {
+        font-size: 1.2rem;
+    }
+    .error-text {
+        font-size: 1rem;
+    }
+       
 }
 /* Mobile view */
 @media screen and (max-width:578px) {

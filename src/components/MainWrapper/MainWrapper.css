@@ -104,7 +104,25 @@
         border-radius: 1.2rem;
         width: 80vw;
         height: 65vh;
+        padding-top: 5rem;
+        padding-bottom: 2rem;
     }
+    .form-class {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        width: 49vw;
+        height: 50vh;
+        margin-top: 2rem;
+    }
+    .form-group{
+        width: 55vw;
+        height: 70vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+        
 }
 @media screen and (max-width:578px) {
     .main-section{

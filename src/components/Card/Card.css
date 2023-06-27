@@ -40,6 +40,42 @@
     color: hsl(231, 11%, 63%);
     font-size: 14px;
 }
+/* Tablet view */
+@media screen and (min-width:579px) and (max-width: 1180px) {
+    .card-group {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        margin: 1rem auto 1rem auto;
+    }
+    .card {
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        height: 8vh;
+        width: 50vw;
+        border: 2px solid rgb(201, 210, 221);
+        border-radius: 0.3rem;
+        padding: .7rem;
+        margin: 0 auto .5rem auto;
+    }
+    .icon {
+        width: 65px;
+        height: 65px;
+        padding-top: .1rem;
+        padding-bottom: .1rem;
+    }
+    .text-group {
+        margin: auto 1rem auto 1rem;
+    }
+    .card-label-text{
+        font-size: 1.1rem;
+    }
+    .card-text{
+        font-size: 1.1rem;
+    }
+}
 @media screen and (max-width:578px) {
     .card-group {
         display: flex;

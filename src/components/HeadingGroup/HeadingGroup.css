@@ -14,7 +14,12 @@
     font-weight: normal;
     color: hsl(231, 11%, 63%);
 }
-
+/* tablet view */
+@media screen and (min-width:579px) and (max-width: 1180px) {
+    .hgroup-heading {
+        font-size: 1.8rem;
+    }
+}
 @media screen and (max-width:578px) {
     .form-hgroup{
         margin: .5rem 2rem .5rem 2rem;

@@ -15,6 +15,15 @@
     bottom: 1rem;
     right: .5rem;
 }
+/* tablet view */
+@media screen and (min-width:579px) and (max-width: 1180px) {
+.form-group {
+        width: 70vw;
+        height: 90vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 @media screen and (max-width:578px) {
     .form-group{
         width: 70vw;

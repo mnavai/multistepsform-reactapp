@@ -48,7 +48,34 @@
     padding-left: 2rem;
     color: rgb(98, 157, 230);
     font-weight: bold;
+}
+/* tablet view */
+@media screen and (min-width:579px) and (max-width: 1180px) {
+    .checkbox-container {
+            display: flex;
+            align-items: center;
+            width: 50vw;
+            height: 8vh;
+            border: 2px solid rgb(201, 210, 221);
+            border-radius: 0.3rem;
+            padding: .7rem;
+            margin: 0 auto .5rem auto;
+    }
+        .checkbox-group {
+            height: 30vh;
+            width: 50vw;
+            margin: 1rem auto 0 auto;
+        }
+        .checkbox-label {
+            font-size: 1rem;
+        }
 
+        .checkbox-p {
+            font-size: .8rem;
+        }
+        .price-tag-p {
+            font-size: 1rem;
+        }
 }
 @media screen and (max-width:578px) {
     .checkbox-container {
