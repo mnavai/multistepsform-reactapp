@@ -1,7 +1,11 @@
 .app-layout {
     display: flex;
 }
-
+@media screen and (min-width:579px) and (max-width: 1180px) {
+    .app-layout {
+        flex-direction: column;
+    }
+}
 
 @media screen and (max-width:578px){
     .app-layout{

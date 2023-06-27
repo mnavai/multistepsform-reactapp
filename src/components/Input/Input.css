@@ -31,7 +31,11 @@
     padding: 0.5rem;
     border-color: rgb(237, 53, 72);
 }
+/* Tablet view */
+@media screen and (min-width:579px) and (max-width: 1180px) {
 
+}
+/* Mobile view */
 @media screen and (max-width:578px) {
     .form-input{
         width: 70vw;

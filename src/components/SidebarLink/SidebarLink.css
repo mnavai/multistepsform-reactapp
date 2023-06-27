@@ -39,6 +39,35 @@
 .nav-p{
     color:white;
 }
+@media screen and (min-width:579px) and (max-width: 1180px) {
+    .side-nav {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .list-item-info {
+        display: none;
+        padding: .2rem;
+    }
+
+    .list-items {
+        margin-top: 5rem;
+        padding: 0;
+        width: 15vw;
+    }
+
+    .circle-icon {
+        width: 50px;
+        height: 50px
+    }
+}
 
 @media screen and (max-width:578px) {
     .side-nav{
@@ -65,4 +94,5 @@
     }
 
 }
+
 

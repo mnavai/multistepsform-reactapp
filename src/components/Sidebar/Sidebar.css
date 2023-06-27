@@ -8,6 +8,14 @@
     background-position: center;
     background-size: cover;
 }
+@media screen and (min-width:579px) and (max-width: 1180px) {
+    .nav-header {
+        padding-top: 0;
+        border-radius: 0;
+        width: 100vw;
+        height: 25vh;
+    }
+}
 @media screen and (max-width:578px) {
     .nav-header {
         padding-top: 0;
@@ -16,3 +24,4 @@
         height: 25vh;
     }
 }
+

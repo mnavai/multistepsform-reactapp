@@ -45,6 +45,25 @@ html, body, h1, h2, h3, h4, h5, p {
     pointer-events: none;
     z-index: 9999;
 }
+@media screen and (min-width:579px) and (max-width: 1180px) {
+    body {
+            display: flex;
+            justify-content: center;
+            place-items: unset;
+            max-width: 100%;
+            overflow: hidden;
+            padding: 0;
+        }
+    
+    .App {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        padding: 0;
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+    }
+}
 @media screen and (max-width:578px) {
     body{
         display: flex;
