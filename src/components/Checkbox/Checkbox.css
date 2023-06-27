@@ -11,6 +11,7 @@
 .checkbox-container.selected{
     border: 2px solid blue;
     cursor: pointer;
+    background-color: rgba(0, 0, 255, 0.08);
 }
 .checkbox-container:hover{
     border: 2px solid blue;
@@ -48,4 +49,30 @@
     color: rgb(98, 157, 230);
     font-weight: bold;
 
+}
+@media screen and (max-width:578px) {
+    .checkbox-container {
+        display: flex;
+        align-items: center;
+        width: 70vw;
+        height: 8vh;
+        border: 2px solid rgb(201, 210, 221);
+        border-radius: 0.3rem;
+        padding: 0.7rem;
+        margin: 0 auto 0.5rem auto;
+    }
+    .checkbox-group {
+        height: 30vh;
+        width: 70vw;
+        margin: 1rem auto 0 auto;
+    }
+    .checkbox-label{
+        font-size: .7rem;
+    }
+    .checkbox-p{
+        font-size: .5rem;
+    }
+    .text-wrapper{
+        padding-right: .5rem;
+    }
 }

@@ -19,6 +19,7 @@
 .card.selected {
     border: 2px solid blue;
     cursor: pointer;
+    background-color: rgba(0, 0, 255, 0.08);
 }
 .card:hover {
     border: 2px solid blue;
