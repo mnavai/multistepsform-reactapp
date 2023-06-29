@@ -138,6 +138,7 @@
         font-size: 20px;
     }
 }
+/* Mobile view */
 @media screen and (max-width:578px) {
     .main-section{
         margin: -5rem auto 1rem auto;
