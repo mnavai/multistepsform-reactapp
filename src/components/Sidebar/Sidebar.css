@@ -8,6 +8,7 @@
     background-position: center;
     background-size: cover;
 }
+/* tablet view */
 @media screen and (min-width:579px) and (max-width: 1180px) {
     .nav-header {
         padding-top: 0;
