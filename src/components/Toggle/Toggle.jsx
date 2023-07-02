@@ -1,10 +1,11 @@
-import { useState, useContext } from "react"
-import "./Toggle.css";
+import { useState, useContext, useEffect } from "react"
 import { CardContext } from "../../context/CardContext";
+import "./Toggle.css";
 
 const Toggle = ({monthly,yearly}) => {
     const [toggleState,setToggleState] = useState(false);
     const {setToggleSelection} = useContext(CardContext);
+    const storage = window.localStorage;
 
       const handleToggle = () => {
         setToggleState(!toggleState);
@@ -17,6 +18,16 @@ const Toggle = ({monthly,yearly}) => {
         }
         setToggleSelection(toggleStatus);
     }
+
+    useEffect(() => {
+        const data = storage.getItem('toggleState');
+        if (data !== null) {setToggleState(JSON.parse(data))} //turns it back to an obj
+    }, [storage]);
+
+    useEffect(() => {
+        storage.setItem("toggleState", JSON.stringify(toggleState));
+    }, [toggleState,storage]);
+
     return(
         <div className="grey-bar">
             <h5 className="grey-bar-month">{monthly}</h5>
