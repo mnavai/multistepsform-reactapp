@@ -3,10 +3,9 @@ import { CardContext } from "../../context/CardContext";
 import "./Toggle.css";
 
 const Toggle = ({monthly,yearly}) => {
-    const [toggleState,setToggleState] = useState(false);
+    const [toggleState,setToggleState] = useState(() => JSON.parse(localStorage.getItem("toggleState")) || false); //the getter should go into state to avoid reinitialization on re-rendering page
     const {setToggleSelection} = useContext(CardContext);
-    const storage = window.localStorage;
-
+  
       const handleToggle = () => {
         setToggleState(!toggleState);
         let toggleStatus = monthly;
@@ -18,15 +17,10 @@ const Toggle = ({monthly,yearly}) => {
         }
         setToggleSelection(toggleStatus);
     }
-
+    
     useEffect(() => {
-        const data = storage.getItem('toggleState');
-        if (data !== null) {setToggleState(JSON.parse(data))} //turns it back to an obj
-    }, []);
-
-    useEffect(() => {
-        storage.setItem("toggleState", JSON.stringify(toggleState));
-    }, [toggleState]); //test
+        localStorage.setItem("toggleState", JSON.stringify(toggleState));
+    }, [toggleState]);
 
     return(
         <div className="grey-bar">
