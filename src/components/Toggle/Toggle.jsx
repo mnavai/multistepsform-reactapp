@@ -22,11 +22,11 @@ const Toggle = ({monthly,yearly}) => {
     useEffect(() => {
         const data = storage.getItem('toggleState');
         if (data !== null) {setToggleState(JSON.parse(data))} //turns it back to an obj
-    }, [storage]);
+    }, []);
 
     useEffect(() => {
         storage.setItem("toggleState", JSON.stringify(toggleState));
-    }, [toggleState,storage]);
+    }, [toggleState]); //test
 
     return(
         <div className="grey-bar">
