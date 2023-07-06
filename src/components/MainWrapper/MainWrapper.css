@@ -97,6 +97,13 @@
     padding-left: 6rem;
     padding-right: 6rem;
 }
+.form-buttons{
+    display: flex;
+    flex-direction: row;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    width: 30vw;
+}
 /* tablet view */
 @media screen and (min-width:579px) and (max-width: 1180px) {
     .main-section {
@@ -136,6 +143,14 @@
         padding-left: 1rem;
         padding-right: 1rem;
         font-size: 20px;
+    }
+    .form-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: 65vw;
     }
 }
 /* Mobile view */
@@ -191,5 +206,13 @@
     }
     .finalmessage-container{
         margin-top: 5rem;
+    }
+    .form-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: 65vw;
     }
 }

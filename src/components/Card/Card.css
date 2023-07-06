@@ -1,6 +1,8 @@
 .card-group {
     display: flex;
     flex-direction: row;
+    margin-left: auto;
+    margin-right: 9rem;
     height: 18vh;
     margin-top: 1rem;
     margin-bottom: 3rem;
