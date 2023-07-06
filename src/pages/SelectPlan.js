@@ -3,7 +3,7 @@ import HeadingGroup from "../components/HeadingGroup/HeadingGroup";
 import Slidebar from "../components/Sidebar/Sidebar";
 import Card from "../components/Card/Card";
 import { Link } from "react-router-dom";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import AppLayout from "../components/AppLayout/AppLayout";
 import MainWrapper from "../components/MainWrapper/MainWrapper";
 import Toggle from "../components/Toggle/Toggle";
@@ -11,7 +11,7 @@ import { CardContext } from "../context/CardContext";
 
 const SelectPlan = () => {
     const { setSelectedCards, setCardPrice } = useContext(CardContext);
-    const [selectedCard, setSelectedCard] = useState(null);
+    const [selectedCard, setSelectedCard] = useState(JSON.parse(localStorage.getItem("selectedCard")) || null);
 
     const handleClickCard = (cardData) => {
         setSelectedCard(cardData);
@@ -19,6 +19,11 @@ const SelectPlan = () => {
         setCardPrice(cardData.price);
         console.log(cardData);
     };
+
+    useEffect(() => {
+            localStorage.setItem("selectedCard",JSON.stringify(selectedCard))
+        }, [selectedCard]
+    );
 
     return(
         <AppLayout>
