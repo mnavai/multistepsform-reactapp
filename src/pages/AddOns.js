@@ -5,17 +5,17 @@ import HeadingGroup from "../components/HeadingGroup/HeadingGroup";
 import Checkbox from "../components/Checkbox/Checkbox";
 import AppLayout from "../components/AppLayout/AppLayout";
 import MainWrapper from "../components/MainWrapper/MainWrapper";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { CheckBoxContext } from "../context/CheckBoxContext";
 
 const AddOns = () => {
     const {addSelectedService}  = useContext(CheckBoxContext);
-    const [selectedCheckbox,setSelectedCheckbox] = useState([]);
+    const [selectedCheckbox,setSelectedCheckbox] = useState(JSON.parse(localStorage.getItem("selectedCheckbox")) || []);
 
     const handleOnChange = (checkboxData) => {
         if (selectedCheckbox.includes(checkboxData.label)) {
             setSelectedCheckbox((prevSelected) =>
-            prevSelected.filter((selected) => selected !== checkboxData.label)
+                prevSelected.filter((selected) => selected !== checkboxData.label)
             );
             addSelectedService(checkboxData.label, 0); // Remove the service from the context
         } else {
@@ -23,6 +23,10 @@ const AddOns = () => {
             addSelectedService(checkboxData.label, checkboxData.price); // Add the service to the context with its price
         }
     };
+
+    useEffect(() => {
+        localStorage.setItem("selectedCheckbox",JSON.stringify(selectedCheckbox))
+    },[selectedCheckbox]);
 
     return (
         <AppLayout>

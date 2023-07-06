@@ -1,7 +1,10 @@
 import './Checkbox.css';
 const Checkbox = ({label,text,price,onChange,id,selectedCheckbox}) => {
+
+    const chosenChekbox = selectedCheckbox && selectedCheckbox.id === id;
+    
     return(
-        <div className={`checkbox-container ${selectedCheckbox ? "selected" : ""}`} data-checkboxid={id} >
+        <div className={`checkbox-container ${chosenChekbox ? "selected" : ""}`} data-checkboxid={id} >
             <div className="checkbox" >
                 <input type="checkbox" id="checkbox" className="checkbox-class" onChange={onChange} />
             </div>

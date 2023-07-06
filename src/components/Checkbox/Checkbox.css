@@ -8,7 +8,7 @@
     padding: .7rem;
     margin: 0 auto 0.2rem auto;
 }
-.checkbox-container.selected{
+.checkbox-container.selected {
     border: 2px solid blue;
     cursor: pointer;
     background-color: rgba(0, 0, 255, 0.08);
