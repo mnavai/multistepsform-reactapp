@@ -104,6 +104,13 @@
     margin-right: 4rem;
     width: 30vw;
 }
+.single-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2.8rem;
+    margin-right: 4rem;
+    width: 27.8vw;
+}
 /* tablet view */
 @media screen and (min-width:579px) and (max-width: 1180px) {
     .main-section {
@@ -152,6 +159,14 @@
         margin-right: 2rem;
         width: 65vw;
     }
+    .single-btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 9.8rem;
+        margin-right: 0;
+        width: 58.5vw;
+    }
+   
 }
 /* Mobile view */
 @media screen and (max-width:578px) {
@@ -169,11 +184,7 @@
     .form-hgroup{
         margin-top: 1.5rem;
     }
-    .single-btn{
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-    }
+
     .bill-container {
         height: 35vh;
         width: 66vw;
@@ -214,5 +225,12 @@
         margin-left: 2rem;
         margin-right: 2rem;
         width: 65vw;
+    }
+    .single-btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 4.8rem;
+        margin-right: 0;
+        width: 66vw;
     }
 }

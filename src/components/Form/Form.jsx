@@ -88,7 +88,7 @@ const Form = () => {
         value={phone}
         error={!phone && submitted ? "This field is required" : ""}
       />
-      <div className="form-buttons single-btn">
+      <div className="single-btn">
         <Button type="submit" className="btn">
           Next Step
         </Button>
