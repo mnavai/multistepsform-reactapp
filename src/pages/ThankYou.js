@@ -16,6 +16,7 @@ const Summary = () => {
     setShowConfetti(true);
     setTimeout(() => {
       setShowConfetti(false);
+      localStorage.clear(); // Clear local storage
       navigate("/");
     }, 15000);
     }, [navigate]);
