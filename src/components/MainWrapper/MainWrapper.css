@@ -166,6 +166,14 @@
         margin-right: 0;
         width: 58.5vw;
     }
+    .plan-details-container {
+        height: 30vh;
+        border-radius: .5rem;
+        background-color: hsl(210, 5%, 91%);
+    }
+    .selected-plan {
+        height: 8vh;
+    }
    
 }
 /* Mobile view */
@@ -198,6 +206,7 @@
     }
     .selected-addons{
         font-size: .7rem;
+        
     }
     .total{
         font-size: .7rem;
@@ -233,4 +242,10 @@
         margin-right: 0;
         width: 66vw;
     }
+    .plan-details-container {
+        height: 30vh;
+        border-radius: .5rem;
+        background-color: hsl(210, 5%, 91%);
+    }
+    
 }
