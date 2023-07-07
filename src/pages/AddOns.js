@@ -17,17 +17,15 @@ const AddOns = () => {
         const { label, price } = checkboxData;
         const updatedCheckboxState = !selectedCheckbox[label];
 
-        setSelectedCheckbox((prevSelected) => ({
-            ...prevSelected,
-            [label]: updatedCheckboxState,
-        }));
+        setSelectedCheckbox((prevSelected) => {
+            const updatedSelected = { ...prevSelected };
+            updatedSelected[label] = updatedCheckboxState;
+            return updatedSelected;
+        });
 
-        if (updatedCheckboxState) {
-            addSelectedService(label, price);
-        } else {
-            addSelectedService(label, 0);
-        }
+        addSelectedService(label, updatedCheckboxState ? price : 0);
     };
+
 
     useEffect(() => {
         localStorage.setItem("selectedCheckbox",JSON.stringify(selectedCheckbox))
