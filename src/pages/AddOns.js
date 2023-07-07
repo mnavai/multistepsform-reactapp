@@ -10,29 +10,28 @@ import { CheckBoxContext } from "../context/CheckBoxContext";
 
 const AddOns = () => {
     const {addSelectedService}  = useContext(CheckBoxContext);
-    const [selectedCheckbox,setSelectedCheckbox] = useState(JSON.parse(localStorage.getItem("selectedCheckbox")) || []);
-    const [isChecked, setIsChecked] = useState(JSON.parse(localStorage.getItem("isChecked")) || false);
+    const [selectedCheckbox,setSelectedCheckbox] = useState(JSON.parse(localStorage.getItem("selectedCheckbox")) || {});
+    
 
     const handleOnChange = (checkboxData) => {
-        if (selectedCheckbox.includes(checkboxData.label)) {
-            setSelectedCheckbox((prevSelected) =>
-                prevSelected.filter((selected) => selected !== checkboxData.label)
-            );
-            addSelectedService(checkboxData.label, 0); // Remove the service from the context
+        const { label, price } = checkboxData;
+        const updatedCheckboxState = !selectedCheckbox[label];
+
+        setSelectedCheckbox((prevSelected) => ({
+            ...prevSelected,
+            [label]: updatedCheckboxState,
+        }));
+
+        if (updatedCheckboxState) {
+            addSelectedService(label, price);
         } else {
-            setSelectedCheckbox((prevSelected) => [...prevSelected, checkboxData.label]);
-            addSelectedService(checkboxData.label, checkboxData.price); // Add the service to the context with its price
+            addSelectedService(label, 0);
         }
-        setIsChecked(!isChecked)
     };
 
     useEffect(() => {
         localStorage.setItem("selectedCheckbox",JSON.stringify(selectedCheckbox))
     },[selectedCheckbox]);
-
-    useEffect(() => {
-        localStorage.setItem("isChecked",JSON.stringify(isChecked))
-    },[isChecked]);
 
     return (
         <AppLayout>
@@ -48,7 +47,7 @@ const AddOns = () => {
                         price="+$1/mon"
                         onChange={() => handleOnChange({label: "Online Service" , price:1 })}
                         selectedCheckbox={selectedCheckbox}
-                        isChecked={isChecked} />
+                        isChecked={selectedCheckbox["Online Service"]} />
                     <Checkbox
                         id={2} 
                         label="Larger Storage" 
@@ -56,7 +55,7 @@ const AddOns = () => {
                         price="+$2/mon"
                         onChange={() => handleOnChange({label: "Larger Storage" , price:2 })}
                         selectedCheckbox={selectedCheckbox}
-                        isChecked={isChecked} />
+                        isChecked={selectedCheckbox["Larger Storage"]} />
                     <Checkbox
                         id={3} 
                         label="Customizable Profile" 
@@ -64,7 +63,7 @@ const AddOns = () => {
                         price="+$2/mon"
                         onChange={() => handleOnChange({label: "Customizable Profile" , price:2 })}
                         selectedCheckbox={selectedCheckbox}
-                        isChecked={isChecked} />
+                        isChecked={selectedCheckbox["Customizable Profile"]} />
                 </div>
                 <div className="form-buttons">
                     <Link to="/select-plan"><Button type="submit" className="btn-goback">Go Back</Button></Link>
