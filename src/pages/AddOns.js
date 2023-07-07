@@ -11,6 +11,7 @@ import { CheckBoxContext } from "../context/CheckBoxContext";
 const AddOns = () => {
     const {addSelectedService}  = useContext(CheckBoxContext);
     const [selectedCheckbox,setSelectedCheckbox] = useState(JSON.parse(localStorage.getItem("selectedCheckbox")) || []);
+    const [isChecked, setIsChecked] = useState(JSON.parse(localStorage.getItem("isChecked")) || false);
 
     const handleOnChange = (checkboxData) => {
         if (selectedCheckbox.includes(checkboxData.label)) {
@@ -22,11 +23,16 @@ const AddOns = () => {
             setSelectedCheckbox((prevSelected) => [...prevSelected, checkboxData.label]);
             addSelectedService(checkboxData.label, checkboxData.price); // Add the service to the context with its price
         }
+        setIsChecked(!isChecked)
     };
 
     useEffect(() => {
         localStorage.setItem("selectedCheckbox",JSON.stringify(selectedCheckbox))
     },[selectedCheckbox]);
+
+    useEffect(() => {
+        localStorage.setItem("isChecked",JSON.stringify(isChecked))
+    },[isChecked]);
 
     return (
         <AppLayout>
@@ -41,21 +47,24 @@ const AddOns = () => {
                         text="Access to multiplayer games" 
                         price="+$1/mon"
                         onChange={() => handleOnChange({label: "Online Service" , price:1 })}
-                        selectedCheckbox={selectedCheckbox === 1} />
+                        selectedCheckbox={selectedCheckbox}
+                        isChecked={isChecked} />
                     <Checkbox
                         id={2} 
                         label="Larger Storage" 
                         text="Extra 1TB of cloud save" 
                         price="+$2/mon"
                         onChange={() => handleOnChange({label: "Larger Storage" , price:2 })}
-                        selectedCheckbox={selectedCheckbox === 2} />
+                        selectedCheckbox={selectedCheckbox}
+                        isChecked={isChecked} />
                     <Checkbox
                         id={3} 
                         label="Customizable Profile" 
                         text="Custom theme on your profile" 
                         price="+$2/mon"
                         onChange={() => handleOnChange({label: "Customizable Profile" , price:2 })}
-                        selectedCheckbox={selectedCheckbox === 3} />
+                        selectedCheckbox={selectedCheckbox}
+                        isChecked={isChecked} />
                 </div>
                 <div className="form-buttons">
                     <Link to="/select-plan"><Button type="submit" className="btn-goback">Go Back</Button></Link>
