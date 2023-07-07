@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "../Button/Button.css";
 import "../Form/Form.css";
-
+const getForm = process.env.REACT_APP_GET_FORM_KEY;
 const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -60,7 +60,8 @@ const Form = () => {
     }
   };
   return (
-    <form id="form" className="form-group" onSubmit={handleSubmit}>
+    
+    <form id="form" className="form-group" onSubmit={handleSubmit} action={`https://getform.io/f/${getForm}`} method="POST">
       <Input
         labelName="Name"
         id="name"

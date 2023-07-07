@@ -12,6 +12,7 @@ const Input = ({ id, labelName, type, placeholder, onChange, value, error }) => 
         {hasError && <label className="error-text">{error}</label>}
       </div>
       <input
+        name={id}
         type={type}
         id={id}
         className={hasError ? "form-input-error" : "form-input"}
