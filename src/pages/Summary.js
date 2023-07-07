@@ -14,6 +14,7 @@ const Summary = () => {
 
     const totalPrice = selectedServices.reduce((total, service) => total + service.price, cardPrice);
     
+    
     return (
         <AppLayout>
             <Sidebar currentStep="4" />

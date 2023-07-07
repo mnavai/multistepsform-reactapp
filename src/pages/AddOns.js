@@ -12,7 +12,6 @@ const AddOns = () => {
     const {addSelectedService}  = useContext(CheckBoxContext);
     const [selectedCheckbox,setSelectedCheckbox] = useState(JSON.parse(localStorage.getItem("selectedCheckbox")) || {});
     
-
     const handleOnChange = (checkboxData) => {
         const { label, price } = checkboxData;
         const updatedCheckboxState = !selectedCheckbox[label];
