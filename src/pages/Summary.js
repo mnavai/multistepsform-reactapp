@@ -13,6 +13,7 @@ const Summary = () => {
     const { selectedServices } = useContext(CheckBoxContext);
 
     const totalPrice = selectedServices.reduce((total, service) => total + service.price, cardPrice);
+
     
     
     return (

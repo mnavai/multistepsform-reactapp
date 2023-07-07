@@ -22,9 +22,8 @@ const AddOns = () => {
             return updatedSelected;
         });
 
-        addSelectedService(label, updatedCheckboxState ? price : 0);
+        addSelectedService(label, updatedCheckboxState ? price : 0, updatedCheckboxState);
     };
-
 
     useEffect(() => {
         localStorage.setItem("selectedCheckbox",JSON.stringify(selectedCheckbox))

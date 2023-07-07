@@ -8,14 +8,22 @@ export const CheckBoxContext = createContext({
 export const CheckBoxProvider = ({children}) => {
     const [selectedServices, setSelectedServices] = useState([]);
 
-    const addSelectedService =  (service, price) => {
-        setSelectedServices(
-            (prevServices) => [
-                ...prevServices,
-                { service, price },
-            ]
-        )
-    }
+    const addSelectedService = (service, price) => {
+    const existingService = selectedServices.find((selected) => selected.service === service);
+
+    if (existingService) {
+    const updatedServices = selectedServices.filter((selected) => selected.service !== service);
+        setSelectedServices(updatedServices);
+        } else {
+        setSelectedServices((prevServices) => [
+            ...prevServices,
+            {
+            service,
+            price,
+            },
+        ]);
+        }
+    };
 
     const value = {selectedServices, addSelectedService};
 
