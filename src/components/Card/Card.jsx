@@ -5,7 +5,7 @@ const Card = ({src, altText, label, price, onClick, selectedCard, id}) => {
     const cardSelected = selectedCard && selectedCard.id === id;
     
     return(
-        <div className={`card ${cardSelected ? "selected" : ""}`} onClick={onClick} data-cardId={id}>
+        <div className={`card ${cardSelected ? "selected" : ""}`} onClick={onClick} data-cardid={id}>
             <div className="icon">
                 <img src={src} alt={altText}/>
             </div>

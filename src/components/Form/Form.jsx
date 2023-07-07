@@ -32,6 +32,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
+    console.log(getForm)
 
     if (validateForm()) {
       toast.error("You need to fill all required fields!", {
