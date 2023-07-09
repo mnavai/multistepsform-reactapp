@@ -18,7 +18,7 @@ const Summary = () => {
       setShowConfetti(false);
       localStorage.clear(); // Clear local storage
       navigate("/");
-    }, 12000);
+    }, 10000);
     }, [navigate]);
 
     return (
