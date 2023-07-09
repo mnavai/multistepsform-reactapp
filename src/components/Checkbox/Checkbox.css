@@ -51,16 +51,16 @@
 }
 /* tablet view */
 @media screen and (min-width:579px) and (max-width: 1180px) {
-    .checkbox-container {
-            display: flex;
-            align-items: center;
-            width: 50vw;
-            height: 8vh;
-            border: 2px solid rgb(201, 210, 221);
-            border-radius: 0.3rem;
-            padding: .7rem;
-            margin: 0 auto .5rem auto;
-    }
+        .checkbox-container {
+                display: flex;
+                align-items: center;
+                width: 50vw;
+                height: 8vh;
+                border: 2px solid rgb(201, 210, 221);
+                border-radius: 0.3rem;
+                padding: .7rem;
+                margin: 0 auto .5rem auto;
+        }
         .checkbox-group {
             height: 30vh;
             width: 50vw;
