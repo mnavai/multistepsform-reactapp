@@ -10,7 +10,7 @@ import Toggle from "../components/Toggle/Toggle";
 import { CardContext } from "../context/CardContext";
 
 const SelectPlan = () => {
-    const { setSelectedCards, setCardPrice } = useContext(CardContext);
+    const { setSelectedCards, setCardPrice, toggleSelection } = useContext(CardContext);
     const [selectedCard, setSelectedCard] = useState(JSON.parse(localStorage.getItem("selectedCard")) || null);
 
     const handleClickCard = (cardData) => {
@@ -36,7 +36,7 @@ const SelectPlan = () => {
                             src="assets/images/icon-arcade.svg"
                             altText="arcade icon"
                             label="Arcade"
-                            price="$9/mo"
+                            price={toggleSelection === "Yearly" ? "$108/yr" : "$9/mo"}
                             onClick={() => handleClickCard({ id:1, label: "Arcade", price: 9 })}
                             selectedCard={selectedCard}
                             />
@@ -44,7 +44,7 @@ const SelectPlan = () => {
                             src="assets/images/icon-advanced.svg" 
                             altText="advanced icon"
                             label="Advanced"
-                            price="$12/mo"
+                            price={toggleSelection === "Yearly" ? "$144/yr" : "$12/mo"}
                             onClick={() => handleClickCard({ id:2, label: "Advanced", price: 12 })}
                             selectedCard={selectedCard}
                             />
@@ -52,7 +52,7 @@ const SelectPlan = () => {
                             src="assets/images/icon-pro.svg"
                             altText="pro icon"
                             label="Pro"
-                            price="$15/mo"
+                            price={toggleSelection === "Yearly" ? "$180/yr" : "$15/mo"}
                             onClick={() => handleClickCard({ id:3, label: "Pro", price: 15 })}
                             selectedCard={selectedCard}
                             />
