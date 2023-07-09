@@ -42,6 +42,10 @@
     color: hsl(231, 11%, 63%);
     font-size: 14px;
 }
+.free-deal{
+    font-size: .7rem;
+    color: hsl(213, 96%, 18%);
+}
 /* Tablet view */
 @media screen and (min-width:579px) and (max-width: 1180px) {
     .card-group {
@@ -67,6 +71,7 @@
         height: 65px;
         padding-top: .1rem;
         padding-bottom: .1rem;
+        margin-left: 1rem;
     }
     .text-group {
         margin: auto 1rem auto 1rem;
@@ -76,6 +81,10 @@
     }
     .card-text{
         font-size: 1.1rem;
+    }
+    .free-deal {
+        font-size: 1rem;
+        color: hsl(213, 96%, 18%);
     }
 }
 @media screen and (max-width:578px) {

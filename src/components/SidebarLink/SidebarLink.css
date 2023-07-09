@@ -32,7 +32,6 @@
     color: hsl(213, 96%, 18%);
     font-weight: bold;
 }
-
 .nav-heading{
     color: hsl(231, 11%, 63%);
 }
@@ -44,28 +43,24 @@
         margin-left: auto;
         margin-right: auto;
     }
-
     ul {
         display: flex;
         justify-content: center;
         margin-left: auto;
         margin-right: auto;
     }
-
     .list-item-info {
         display: none;
         padding: .2rem;
     }
-
     .list-items {
         margin-top: 5rem;
         padding: 0;
         width: 15vw;
     }
-
     .circle-icon {
-        width: 50px;
-        height: 50px
+        width: 65px;
+        height: 65px;
     }
 }
 
@@ -82,7 +77,6 @@
         display: none;
         padding: .2rem;
     }
-
     .list-items {
         padding: 0;
         width: 15vw;
@@ -92,7 +86,6 @@
         width: 40px;
         height: 40px
     }
-
 }
 
 

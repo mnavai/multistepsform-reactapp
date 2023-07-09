@@ -15,7 +15,7 @@ const Card = ({src, altText, label, price, onClick, selectedCard, id}) => {
             <div className="text-group">
                 <h5 className="card-label-text">{label}</h5>
                 <p className="card-text">{price}</p>
-                {toggleSelection === "Yearly" && <p className='free-deal'>Two months free</p>}
+                {toggleSelection === "Yearly" && <p className='free-deal'>2 months free</p>}
             </div>
         </div>
     );

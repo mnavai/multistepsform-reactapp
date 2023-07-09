@@ -33,3 +33,9 @@
 .btn.single-btn{
     justify-content: flex-end;
 }
+@media screen and (min-width:579px) and (max-width: 1180px) {
+    .btn-goback {
+        font-size: 16px;
+        width: 4rem;
+    }
+}
