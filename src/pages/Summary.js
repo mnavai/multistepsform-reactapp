@@ -12,10 +12,16 @@ const Summary = () => {
     const { selectCards, toggleSelection, cardPrice } = useContext(CardContext);
     const { selectedServices } = useContext(CheckBoxContext);
 
-    const isYearlyPlan = toggleSelection === "yearly";
-    const cardPriceYearly = isYearlyPlan ? cardPrice * 12 : cardPrice;
-    const servicesPriceYearly = selectedServices.reduce((total, service) => total + (isYearlyPlan ? service.price * 12 : service.price), 0);
-    const totalPrice = cardPriceYearly + servicesPriceYearly;
+    const isYearlyPlan = toggleSelection === "Yearly";
+    const cardPriceYearly = cardPrice * 12 
+    const servicesPriceYearly = selectedServices.reduce((total, service) => total + (service.price * 12), 0);
+    var totalPrice
+    if (isYearlyPlan){
+        totalPrice = cardPriceYearly + servicesPriceYearly;
+    }
+    else {
+        totalPrice = selectedServices.reduce((total, service) => total + service.price, cardPrice);
+    }
 
     return (
         <AppLayout>
@@ -33,8 +39,8 @@ const Summary = () => {
                                     <Link to="/select-plan">Change</Link>
                                 </div>
                                 <div className="plan-price">
-                                    +{toggleSelection === 'yearly'
-                                        ? cardPriceYearly 
+                                    +${isYearlyPlan
+                                        ? cardPriceYearly
                                         : cardPrice }/{toggleSelection}
                                 </div>
                             </div>
@@ -46,7 +52,7 @@ const Summary = () => {
                                             <div key={index} className="addon">
                                                 <p className="addons-p">{service.service}</p>
                                                 <p className="addons-price">
-                                                    +{servicesPriceYearly}/{toggleSelection}
+                                                    +${isYearlyPlan ? servicesPriceYearly : service.price}/{toggleSelection}  
                                                 </p>
                                             </div>
                                         ))
@@ -57,7 +63,7 @@ const Summary = () => {
                             </div>
                         </div>
                         <div className="total">
-                            <h1 className="total-heading">Total {isYearlyPlan ? "(Per year)" : "(Per month)" }</h1>
+                            <h1 className="total-heading">Total ({toggleSelection})</h1>
                             <p className="total-price">${totalPrice}</p>
                         </div>
                     </div>
