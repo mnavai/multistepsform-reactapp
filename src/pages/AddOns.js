@@ -7,9 +7,11 @@ import AppLayout from "../components/AppLayout/AppLayout";
 import MainWrapper from "../components/MainWrapper/MainWrapper";
 import { useState, useContext, useEffect } from "react";
 import { CheckBoxContext } from "../context/CheckBoxContext";
+import { CardContext } from "../context/CardContext";
 
-const AddOns = ({toggleSelection}) => {
+const AddOns = () => {
     const {addSelectedService}  = useContext(CheckBoxContext);
+    const { toggleSelection } = useContext(CardContext);
     const [selectedCheckbox,setSelectedCheckbox] = useState(JSON.parse(localStorage.getItem("selectedCheckbox")) || {});
     
     const handleOnChange = (checkboxData) => {
