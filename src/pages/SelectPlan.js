@@ -36,7 +36,7 @@ const SelectPlan = () => {
                             src="assets/images/icon-arcade.svg"
                             altText="arcade icon"
                             label="Arcade"
-                            price="$9/mon"
+                            price="$9/mo"
                             onClick={() => handleClickCard({ id:1, label: "Arcade", price: 9 })}
                             selectedCard={selectedCard}
                             />
@@ -44,7 +44,7 @@ const SelectPlan = () => {
                             src="assets/images/icon-advanced.svg" 
                             altText="advanced icon"
                             label="Advanced"
-                            price="$12/mon"
+                            price="$12/mo"
                             onClick={() => handleClickCard({ id:2, label: "Advanced", price: 12 })}
                             selectedCard={selectedCard}
                             />
@@ -52,7 +52,7 @@ const SelectPlan = () => {
                             src="assets/images/icon-pro.svg"
                             altText="pro icon"
                             label="Pro"
-                            price="$15/mon"
+                            price="$15/mo"
                             onClick={() => handleClickCard({ id:3, label: "Pro", price: 15 })}
                             selectedCard={selectedCard}
                             />

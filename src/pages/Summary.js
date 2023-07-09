@@ -41,7 +41,7 @@ const Summary = () => {
                                 <div className="plan-price">
                                     +${isYearlyPlan
                                         ? cardPriceYearly
-                                        : cardPrice }/{toggleSelection}
+                                        : cardPrice }{isYearlyPlan ? "/yr" : "/mo"}
                                 </div>
                             </div>
                             <hr />
@@ -52,7 +52,7 @@ const Summary = () => {
                                             <div key={index} className="addon">
                                                 <p className="addons-p">{service.service}</p>
                                                 <p className="addons-price">
-                                                    +${isYearlyPlan ? servicesPriceYearly : service.price}/{toggleSelection}  
+                                                    +${isYearlyPlan ? servicesPriceYearly : service.price}{isYearlyPlan ? "/yr" : "/mo"}  
                                                 </p>
                                             </div>
                                         ))
@@ -63,8 +63,8 @@ const Summary = () => {
                             </div>
                         </div>
                         <div className="total">
-                            <h1 className="total-heading">Total ({toggleSelection})</h1>
-                            <p className="total-price">${totalPrice}</p>
+                            <h1 className="total-heading">Total {isYearlyPlan ? " (Per year)" : " (Per month)"}</h1>
+                            <p className="total-price">${totalPrice}{isYearlyPlan ? "/yr" : "/mo"} </p>
                         </div>
                     </div>
                     <div className="form-buttons">

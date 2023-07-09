@@ -40,7 +40,7 @@ const AddOns = () => {
                         id={1} 
                         label="Online Service" 
                         text="Access to multiplayer games" 
-                        price="+$1/mon"
+                        price="+$1/mo"
                         onChange={() => handleOnChange({label: "Online Service" , price:1 })}
                         selectedCheckbox={selectedCheckbox}
                         isChecked={selectedCheckbox["Online Service"]} />
@@ -48,7 +48,7 @@ const AddOns = () => {
                         id={2} 
                         label="Larger Storage" 
                         text="Extra 1TB of cloud save" 
-                        price="+$2/mon"
+                        price="+$2/mo"
                         onChange={() => handleOnChange({label: "Larger Storage" , price:2 })}
                         selectedCheckbox={selectedCheckbox}
                         isChecked={selectedCheckbox["Larger Storage"]} />
@@ -56,7 +56,7 @@ const AddOns = () => {
                         id={3} 
                         label="Customizable Profile" 
                         text="Custom theme on your profile" 
-                        price="+$2/mon"
+                        price="+$2/mo"
                         onChange={() => handleOnChange({label: "Customizable Profile" , price:2 })}
                         selectedCheckbox={selectedCheckbox}
                         isChecked={selectedCheckbox["Customizable Profile"]} />
