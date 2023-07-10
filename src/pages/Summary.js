@@ -14,15 +14,20 @@ const Summary = () => {
 
     const isYearlyPlan = toggleSelection === "Yearly";
     const cardPriceYearly = cardPrice * 12 
-    const servicesPriceYearly = selectedServices.reduce((total, service) => total + (service.price * 12), 0);
-    var totalPrice
+    const servicesPriceYearly = selectedServices.reduce((total, service) => {
+        const servicePriceYearly = service.price * 12;
+        return total + servicePriceYearly;
+    }, 0);
+    let totalPrice
     if (isYearlyPlan){
         totalPrice = cardPriceYearly + servicesPriceYearly;
     }
     else {
-        totalPrice = selectedServices.reduce((total, service) => total + service.price, cardPrice);
+        const selectedServicesTotal = selectedServices.reduce((total, service) => {
+            return total + service.price
+        },0);
+        totalPrice = cardPrice + selectedServicesTotal;
     }
-
     return (
         <AppLayout>
             <Sidebar currentStep="4" />
@@ -52,7 +57,10 @@ const Summary = () => {
                                             <div key={index} className="addon">
                                                 <p className="addons-p">{service.service}</p>
                                                 <p className="addons-price">
-                                                    +${toggleSelection === "Yearly" ? service.price * 12 : service.price}{isYearlyPlan ? "/yr" : "/mo"}  
+                                                    +${isYearlyPlan? servicesPriceYearly : selectedServices.map((service) => {
+                                                            const total = 0;
+                                                            return  total + service.price
+                                                        })}{isYearlyPlan ? "/yr" : "/mo"}  
                                                 </p>
                                             </div>
                                         ))
