@@ -59,7 +59,7 @@ const Summary = () => {
                                             <div key={index} className="addon">
                                                 <p className="addons-p">{service.service}</p>
                                                 <p className="addons-price">
-                                                    +${service.price}{isYearlyPlan ? "/yr" : "/mo"}  
+                                                    +${isYearlyPlan ? service.price * 12 : service.price}{isYearlyPlan ? "/yr" : "/mo"}  
                                                 </p>
                                             </div>
                                         ))
