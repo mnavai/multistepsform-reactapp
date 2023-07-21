@@ -4,9 +4,9 @@ const Checkbox = ({label,text,price,onChange,id,selectedCheckbox,isChecked}) => 
     const chosenChekbox = selectedCheckbox && selectedCheckbox.id === id;
 
     return(
-        <div className={`checkbox-container ${chosenChekbox ? "selected" : ""}`} data-checkboxid={id} data-testid="checkbox">
+        <div className={`checkbox-container ${chosenChekbox ? "selected" : ""}`} data-checkboxid={id} >
             <div className="checkbox" >
-                <input type="checkbox" id={id} className="checkbox-class" onChange={onChange} checked={isChecked}/>
+                <input type="checkbox" id={id} className="checkbox-class" onChange={onChange} checked={isChecked} data-testid="checkbox"/>
             </div>
             <div className="text-wrapper">
                 <h5 className="checkbox-label" data-testid="label">{label}</h5>

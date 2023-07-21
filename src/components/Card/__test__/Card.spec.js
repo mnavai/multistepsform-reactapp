@@ -13,7 +13,6 @@ describe("Card component",() => {
         const selectedCard = {"id":2,"label":"Advanced","price":12}
         render(<Card src="assets/images/icon-arcade.svg" altText="arcade icon" label="Arcade" price={108} onClick={() => handleClickCard(selectedCard)} selectedCard={selectedCard}></Card>)
         const icon = screen.getByTestId('icon')
-        screen.debug()
         expect(icon).toHaveProperty("src","http://localhost/assets/images/icon-arcade.svg")
         expect(icon).toHaveProperty("alt","arcade icon")
         const label = screen.getByTestId("label")
