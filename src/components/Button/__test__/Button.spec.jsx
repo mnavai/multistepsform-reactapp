@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Button from '../Button';
 
 describe('Button component', () => {
@@ -7,7 +7,7 @@ describe('Button component', () => {
         const button = screen.getByTestId('button');
         expect(button).toBeInTheDocument()
     })
-    it('renders button contetn correctly', () => {
+    it('renders button content correctly', () => {
         render(<Button>Test button</Button>)
         const button = screen.getByTestId('button');
         expect(button).toHaveTextContent('Test button');
@@ -17,13 +17,4 @@ describe('Button component', () => {
         const button = screen.getByTestId('button')
         expect(button).toHaveClass('test-btn-class')
     })
-    // it('fires handleSubmit correctly', () => {
-    //     const handleClick = jest.fn(() => {
-    //         return 'foo' 
-    //     })
-    //     render(<Button handleClick={handleClick}></Button>)
-    //     const button = screen.getByTestId('button')
-    //     fireEvent.click(button)
-    //     expect(handleClick).toHaveBeenCalledTimes(1)
-    // })
 })
