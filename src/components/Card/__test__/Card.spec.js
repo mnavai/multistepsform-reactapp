@@ -25,6 +25,7 @@ describe("Card component",() => {
         expect(handleClickCard).toHaveBeenCalledTimes(1)
         expect(handleClickCard).toHaveBeenCalledWith(selectedCard)
         expect(handleClickCard).toReturnWith(selectedCard)
-
+        // const selectedcard = screen.getByTestId('card')
+        // expect(selectedcard).not.toBeInTheDocument()
     })
 })
