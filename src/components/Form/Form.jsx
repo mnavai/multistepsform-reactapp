@@ -60,8 +60,7 @@ const Form = () => {
     }
   };
   return (
-    
-    <form id="form" className="form-group" onSubmit={handleSubmit} action={`https://getform.io/f/${getForm}`} method="POST">
+    <form id="form" className="form-group" onSubmit={handleSubmit} action={`https://getform.io/f/${getForm}`} method="POST" data-testid="form">
       <Input
         labelName="Name"
         id="name"

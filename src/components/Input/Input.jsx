@@ -6,7 +6,7 @@ const Input = ({ id, labelName, type, placeholder, onChange, value, error }) => 
   return (
     <div className="field-group">
       <div className="labels-container">
-        <label className="form-label" htmlFor={id}>
+        <label className="form-label" htmlFor={id} data-testid="label">
           {labelName}
         </label>
         {hasError && <label className="error-text">{error}</label>}
@@ -19,6 +19,7 @@ const Input = ({ id, labelName, type, placeholder, onChange, value, error }) => 
         placeholder={placeholder}
         onChange={onChange}
         value={value}
+        data-testid="input"
       />
     </div>
   );
