@@ -26,6 +26,7 @@ describe ("Checkbox component",() => {
         rerender(<Checkbox label={selectedCheckbox.label} text="Access to multiplayer games" price={selectedCheckbox.price} onChange={() => handleOnChange(selectedCheckbox)} id={selectedCheckbox.id} selectedCheckbox={selectedCheckbox} isChecked={selectedCheckbox["Online Service"]} ></Checkbox>)
         fireEvent.click(checkbox)
         expect(checkbox.checked).toBe(false)
-        
+        const id = selectedCheckbox.id.toString()
+        expect(id).toEqual("1")
     })
 })
