@@ -10,6 +10,8 @@ describe("Input component", () => {
 
   it("should render props correctly", () => {
     const handleNameChange = jest.fn(data => data); 
+    const name = "";
+    const submitted = true;
     render(
       <Input
         labelName="Name"
@@ -21,7 +23,6 @@ describe("Input component", () => {
         error={!name && submitted ? "This field is required" : ""}
       />
     );
-
     const label = screen.getByText("Name"); // Find the label based on its text content
     expect(label.innerHTML).toEqual("Name");
   });
