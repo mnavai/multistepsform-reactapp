@@ -19,7 +19,7 @@ describe("Input component", () => {
         placeholder="e.g. Stephen King"
         type="text"
         onChange={handleNameChange}
-        value={"John Doe"} // Provide a valid name value for testing
+        value={"Mary Smith"} // Provide a valid name value for testing
         error={!name && submitted ? "This field is required" : ""}
       />
     );
