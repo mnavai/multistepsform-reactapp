@@ -25,5 +25,9 @@ describe("Input component", () => {
     );
     const label = screen.getByText("Name"); // Find the label based on its text content
     expect(label.innerHTML).toEqual("Name");
+    const input = screen.getByTestId("input")
+    expect(input).toHaveAttribute("id","name")
+    expect(input).toHaveAttribute("placeholder","e.g. Stephen King")
+    expect(input).toHaveAttribute("type","text")
   });
 });
