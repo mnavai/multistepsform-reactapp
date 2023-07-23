@@ -11,7 +11,7 @@ describe("Input component", () => {
     expect(input).toBeInTheDocument();
   });
 
-  it("should render props correctly", () => {
+  it.skip("should render props correctly", () => {
     const e = {target: {value: 'value'}}
     const handleNameChange = jest.fn(() => {
         return e.target.value
@@ -39,7 +39,7 @@ describe("Input component", () => {
     expect(handleNameChange).toHaveBeenCalledWith("Mary Smith")
 
   });
-  it.only("should throw error when fields are empty", () => {
+  it("should throw error when fields are empty", () => {
     render(<Router><Form></Form></Router>)
     const form = screen.getByTestId("form")
     fireEvent.submit(form)

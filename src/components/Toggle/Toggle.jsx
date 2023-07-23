@@ -26,7 +26,7 @@ const Toggle = ({monthly,yearly}) => {
         <div className="grey-bar">
             <h5 className="grey-bar-month">{monthly}</h5>
             <label className="switch" >
-                <input type="checkbox" onChange={handleToggle} checked={toggleState} />
+                <input type="checkbox" onChange={handleToggle} checked={toggleState} data-testid="toggle"/>
                 <span className="slider round"></span>
             </label>
             <p className="grey-bar-year">{yearly}</p>
