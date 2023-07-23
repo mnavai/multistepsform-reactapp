@@ -9,8 +9,8 @@ describe("Input component", () => {
   });
 
   it("should render props correctly", () => {
-    const handleNameChange = jest.fn(data => data); 
-    const name = "";
+    const handleNameChange = jest.fn(); 
+    const name = "Mary Smith";
     const submitted = true;
     render(
       <Input
@@ -29,5 +29,9 @@ describe("Input component", () => {
     expect(input).toHaveAttribute("id","name")
     expect(input).toHaveAttribute("placeholder","e.g. Stephen King")
     expect(input).toHaveAttribute("type","text")
+    fireEvent.change(input,{ target: {value: "Mary Smith"}})
+    expect(handleNameChange).toHaveBeenCalledTimes(1)
+    expect(handleNameChange).toHaveBeenCalledWith("Mary Smith")
   });
+
 });
