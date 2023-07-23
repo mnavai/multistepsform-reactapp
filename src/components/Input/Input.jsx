@@ -9,7 +9,7 @@ const Input = ({ id, labelName, type, placeholder, onChange, value, error }) => 
         <label className="form-label" htmlFor={id} data-testid="label">
           {labelName}
         </label>
-        {hasError && <label className="error-text">{error}</label>}
+        {hasError && <label className="error-text" data-testid="error">{error}</label>}
       </div>
       <input
         name={id}

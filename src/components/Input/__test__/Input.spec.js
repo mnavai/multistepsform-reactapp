@@ -32,6 +32,8 @@ describe("Input component", () => {
     fireEvent.change(input,{ target: {value: "Mary Smith"}})
     expect(handleNameChange).toHaveBeenCalledTimes(1)
     expect(handleNameChange).toHaveBeenCalledWith("Mary Smith")
+    const errorLabel = screen.getByText("This field is required");
+    expect(errorLabel).toBeInTheDocument();
   });
 
 });
