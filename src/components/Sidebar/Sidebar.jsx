@@ -3,7 +3,7 @@ import SidebarLink from "../SidebarLink/SidebarLink";
 import "./Sidebar.css";
 const Sidebar = ({ currentStep }) => {
     return(
-        <header className="nav-header">
+        <header className="nav-header" data-testid="sidebar-test">
             <nav className="side-nav">
                 <ul>
                     <SidebarLink  step="1" text="YOUR INFO" currentStep={currentStep} />
