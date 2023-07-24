@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import HeadingGroup from '../HeadingGroup';
 
 describe("HeadingGroup component", () => {
@@ -15,5 +15,16 @@ describe("HeadingGroup component", () => {
         expect(heading.innerHTML).toEqual("Personal Info")
         const pTagText = screen.getByTestId("ptag")
         expect(pTagText.innerHTML).toEqual("Please provide your name, email address, and phone number.")
+    })
+    it("should have the correct class name", () => {
+
+        render(<HeadingGroup />);
+        const hgroupElement = screen.getByTestId("hgroup");
+        const headingElement = screen.getByTestId('heading');
+        const ptagElement = screen.getByTestId('ptag');
+
+        expect(hgroupElement).toHaveClass("form-hgroup")
+        expect(headingElement).toHaveClass('hgroup-heading');
+        expect(ptagElement).toHaveClass('hgroup-p');
     })
 })
