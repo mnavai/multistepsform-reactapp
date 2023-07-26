@@ -2,7 +2,6 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom'; 
 import Input from '../Input';
 import Form from '../../Form/Form';
-import Button from '../../Button/Button';
 
 describe("Input component", () => {
   it("should render Input correctly", () => {
@@ -11,7 +10,7 @@ describe("Input component", () => {
     expect(input).toBeInTheDocument();
   });
 
-  it.skip("should render props correctly", () => {
+  it("should render props correctly", () => {
     const e = {target: {value: 'value'}}
     const handleNameChange = jest.fn(() => {
         return e.target.value
