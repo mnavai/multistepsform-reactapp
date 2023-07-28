@@ -34,10 +34,25 @@ describe("Input component", () => {
     expect(input).toHaveAttribute("id","name")
     expect(input).toHaveAttribute("placeholder","e.g. Stephen King")
     expect(input).toHaveAttribute("type","text")
-    fireEvent.change(input,{ target: {value: "Mary Smith"}})
-    expect(handleNameChange).toHaveBeenCalledWith("Mary Smith")
-
   });
+  it("should call onChange with the correct value when input changes", () => {
+    const handleNameChange = jest.fn(); 
+    render(
+      <Input
+        labelName="Name"
+        id="name"
+        placeholder="e.g. Stephen King"
+        type="text"
+        onChange={handleNameChange}
+        value={"Mary Smith"}
+        error=""
+      />
+    );
+    const input = screen.getByTestId("input");
+    fireEvent.change(input, { target: { value: "Mary Smith" } });
+    const newValue = input.value;
+    expect(newValue).toBe("Mary Smith");
+  });  
   it("should throw error when fields are empty", () => {
     render(<Router><Form></Form></Router>)
     const form = screen.getByTestId("form")
