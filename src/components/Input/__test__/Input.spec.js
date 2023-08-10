@@ -24,11 +24,11 @@ describe("Input component", () => {
         placeholder="e.g. Stephen King"
         type="text"
         onChange={handleNameChange}
-        value={"Mary Smith"} // Provide a valid name for testing
+        value={"Mary Smith"} //Provide a valid name for testing
         error={!name && submitted ? "This field is required" : ""}
       />
     );
-    const label = screen.getByText("Name"); // Find the label based on its text content
+    const label = screen.getByText("Name"); 
     expect(label.innerHTML).toEqual("Name");
     const input = screen.getByTestId("input")
     expect(input).toHaveAttribute("id","name")
