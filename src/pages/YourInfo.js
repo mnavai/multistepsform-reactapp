@@ -5,7 +5,7 @@ import AppLayout from "../components/AppLayout/AppLayout";
 import MainWrapper from "../components/MainWrapper/MainWrapper";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+//first page
 const YourInfo = () => {
     return(
         <AppLayout>
